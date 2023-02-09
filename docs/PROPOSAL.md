@@ -4,27 +4,29 @@ This is an example. Replace the information here with your project proposal.
 
 ## Problem Definition
 
-The goal for this project is to build an Information System for Walla Walla University.
-This business application will store information about students and faculty in text files to allow for persistent data.
-Our focus will be on the student faculty relationship as it pertains to advising.
-Student and faculty users will have separate views and menu options.
+The goal for this project is to create a simulation of a rental car facility. It should be user friendly. It should be able to handle user error. It should keep track of whether it has been paid for. 
 
 ### Key Features
 
-* Faculty view of students
-* Student view
-* Register for a classes
-* See available classes
-* Calculated GPA
+* View of which cars are out
+* Scheduling system with fines
+* Cars to be rented
+* Classes of types of cars (trucks, EVs, etc...)
+* Reservation system with error if someone tries to reserve the same car at the same time.
+* Weekly schedule of which cars are being used
 
 ### Assumptions
 
 The users of the system are good actors. 
 No security (authtentication and permissions) will be implemented for this project.
 
+Assume that an employee will be using the program.
+Cars can only be rented for 3 days at a time.
+(Stretch Goal): Employee password login
+
 ## Group Members
 
-* Larry Aamodt
-* Preston Carman
-* Jonathan Duncan
-* James Foster
+* Josh Bielas
+* Kolby Kriegelstein
+* Andrew Flerchinger
+* Luke Graham
