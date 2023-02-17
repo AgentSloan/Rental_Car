@@ -6,9 +6,10 @@ void loading() {
        << " ___/__|__|____  " << endl
        << "{______________}  " << endl
        << " <>         <>        " << endl;
-    cout << "Your car is ready for pick up" << endl; 
+  cout << "Your car is ready for pick up" << endl;
 }
 
+// test call, can be deleted when implemented to main
 int main() {
   loading();
   return 0;
