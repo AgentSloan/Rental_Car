@@ -7,4 +7,3 @@ using namespace std;
 
 std::string helloWorld();
 void loading();
-void Check_in();
