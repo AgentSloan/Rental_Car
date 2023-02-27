@@ -7,3 +7,5 @@ using namespace std;
 
 std::string helloWorld();
 void loading();
+
+void pringWeeklySchedule();
