@@ -1,3 +1,9 @@
+/*File: CarClass_JoshBielas.cpp
+  Description: Contains the car class. Intended for use with Rental Car Project
+  Author: Josh Bielas
+  Date: 2/27/2023
+  */
+
 #include <iostream>
 #include <string>
 
