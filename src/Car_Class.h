@@ -1,4 +1,4 @@
-/*File: Car_Class.cpp
+/*File: Car_Class.h
   Description: Contains the car class. Intended for use with Rental Car Project
   Author: Josh Bielas
   Date: 2/27/2023
@@ -16,6 +16,8 @@ class Car{
         std::string model;
     public:
     // Public class methods to set and get the private class attributes
+        Car(){}
+        Car(bool available){ this -> availability = available; }
         bool getAvailability(){ return this-> availability; }
         void setAvailability(bool available){ this-> availability = available; }
         std::string getMake(){ return this-> make; }
