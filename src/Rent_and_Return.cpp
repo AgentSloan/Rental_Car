@@ -49,6 +49,6 @@ int main() {
   Rent("honda ploiet");
   printAvailability();
   return_car();
-  std::cout << "test" << std::endl;
+  std::cout << "Test is done" << std::endl;
   return 0;
 }
