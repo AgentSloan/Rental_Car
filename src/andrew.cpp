@@ -1,10 +1,12 @@
 #include "Functions_library.h"
+#include "Car_Class.h"
 #include <chrono>
 #include <iomanip>
 #include <iostream>
 #include <ostream>
 #include <string>
 #include <thread>
+
 using namespace std;
 
 void menu() {
@@ -23,6 +25,7 @@ void menu() {
     cin >> chose;
     switch (chose) {
     case '1':
+      
       cout << "please pick from availible cars typing the car's name" << endl;
       // calls the cars availible function
       cin >> car;
