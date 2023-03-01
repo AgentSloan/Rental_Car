@@ -5,5 +5,5 @@
 using namespace std;
 #include <string>
 
-std::string helloWorld();
+string helloWorld();
 void loading();

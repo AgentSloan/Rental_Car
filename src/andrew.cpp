@@ -66,7 +66,7 @@ void loading() {
          << setw(i) << " <>         <>  " << endl;
     cout << "Loading... " << j << "% complete " << endl;
     j++;
-    this_thread::sleep_for(chrono::milliseconds(40));
+    this_thread::sleep_for(chrono::milliseconds(50));
   }
   cout << endl;
   cout << "Your car is ready for pick up" << endl;
