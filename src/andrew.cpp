@@ -13,7 +13,7 @@ void menu() {
   char chose = '0';
   char confirm = 'n';
   string car = " ";
-  cout << "=====Welcome to <playholder>=====" << endl;
+  cout << "=====Welcome to KArL & J Rental=====" << endl;
   do {
     car = " ";
     chose = '0';
@@ -42,6 +42,7 @@ void menu() {
       break;
     case '2':
       // calls a fuction to return a car
+      re_loading();
       cout << "Thank You :) " << endl
            << "Your total is $<days_rented> * <price of car>" << endl;
       break;
@@ -93,7 +94,7 @@ void re_loading() {
 
 // test call, can be deleted when implemented to main
 int main() {
-  re_loading();
- // menu();
+  // re_loading();
+  menu();
   return 0;
 }

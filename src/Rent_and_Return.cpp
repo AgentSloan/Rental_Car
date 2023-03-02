@@ -1,6 +1,10 @@
 #include "Functions_library.h"
 #include <iostream>
 #include <vector>
+#include "Car_Class.cpp"
+
+
+void Rent(std::string car) {
 #include "Car_Class.h"
 
 Car car1;

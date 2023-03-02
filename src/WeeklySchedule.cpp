@@ -1,6 +1,7 @@
 #include "Functions_library.h"
 #include <cstring>
 #include <iostream>
+#include "Car_Class.cpp"
 using namespace std;
 
 // Create dummy variables
@@ -22,7 +23,7 @@ void printWeeklySchedule() {
        << endl
        << "==============================================================="
        << endl
-       << "----------|  Mon.   Tue.   Wed.   Thu.   Fri.   Sat.   Sun." << endl
+       << "----------|  Sun.   Mon.   Tue.   Wed.   Thu.   Fri.   Sat." << endl
        << sport << "      ";
   for (int i = 0; i != 7; i++) {
     if (car1 == false) {
