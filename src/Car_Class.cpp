@@ -12,16 +12,16 @@
 class Car {
 private:
   // Private class attributes
-  std::vector <bool> availability;
+  std::vector<bool> availability;
   std::string make;
   std::string model;
 
 public:
   // Public class methods to set and get the private class attributes
-  std::vector<bool> getAvailability() {
-    return this->availability;
-  } // Needs to be a vector attribute and the vector type must be a bool#############
-  void setAvailability(bool available) { this->availability = available; }
+  std::vector<bool> getAvailability() { return this->availability; }
+  void setAvailability(int index, bool available) {
+    this->availability.at(index) = available;
+  }
   std::string getMake() { return this->make; }
   void setMake(std::string make) { this->make = make; }
   std::string getModel() { return this->model; }
