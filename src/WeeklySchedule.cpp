@@ -16,11 +16,11 @@ vector<bool> car2Availability = car2.getAvailability();
 vector<bool> car3Availability = car3.getAvailability();
 vector<bool> car4Availability = car4.getAvailability();
 vector<bool> car5Availability = car5.getAvailability();
-string sport = "Corvette";
-string utility = "F-150";
-string OffRoad = "Jeep";
-string daily = "Tesla";
-string cool = "mazda furia";
+string model1 = "Corvette";
+string model2 = "F-150";
+string model3 = "Jeep";
+string model4 = "Tesla";
+string model5 = "mazda furia";
 
 // Define print weekly schedule Function
 
@@ -30,7 +30,7 @@ void printWeeklySchedule() {
        << "==============================================================="
        << endl
        << "----------|  Sun.   Mon.   Tue.   Wed.   Thu.   Fri.   Sat." << endl
-       << sport << "      ";
+       << model1 << "      ";
   for (int i = 0; i != 7; i++) {
     if (car1Availability.at(i) == false) {
       cout << "x      ";
@@ -38,7 +38,7 @@ void printWeeklySchedule() {
       cout << "#      ";
     }
   }
-  cout << endl << utility << "         ";
+  cout << endl << model2 << "         ";
   for (int i = 0; i != 7; i++) {
     if (car2Availability.at(i) == false) {
       cout << "x      ";
@@ -46,7 +46,7 @@ void printWeeklySchedule() {
       cout << "#      ";
     }
   }
-  cout << endl << daily << "         ";
+  cout << endl << model3 << "         ";
   for (int i = 0; i != 7; i++) {
     if (car3Availability.at(i) == false) {
       cout << "x      ";
@@ -54,7 +54,7 @@ void printWeeklySchedule() {
       cout << "#      ";
     }
   }
-  cout << endl << cool << "   ";
+  cout << endl << model4 << "   ";
   for (int i = 0; i != 7; i++) {
     if (car4Availability.at(i) == false) {
       cout << "x      ";
@@ -62,7 +62,7 @@ void printWeeklySchedule() {
       cout << "#      ";
     }
   }
-  cout << endl << OffRoad << "          ";
+  cout << endl << model5 << "          ";
   for (int i = 0; i != 7; i++) {
     if (car5Availability.at(i) == false) {
       cout << "x      ";
