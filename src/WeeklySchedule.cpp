@@ -5,11 +5,17 @@
 using namespace std;
 
 // Create dummy variables
-bool car1 = false;
-bool car2 = true;
-bool car3 = false;
-bool car4 = true;
-bool car5 = false;
+Car car1;
+Car car2;
+Car car3;
+Car car4;
+Car car5;
+// Define Availiabilty vecot
+vector<bool> car1Availability = car1.getAvailability();
+vector<bool> car2Availability = car2.getAvailability();
+vector<bool> car3Availability = car3.getAvailability();
+vector<bool> car4Availability = car4.getAvailability();
+vector<bool> car5Availability = car5.getAvailability();
 string sport = "Corvette";
 string utility = "F-150";
 string OffRoad = "Jeep";
@@ -26,7 +32,7 @@ void printWeeklySchedule() {
        << "----------|  Sun.   Mon.   Tue.   Wed.   Thu.   Fri.   Sat." << endl
        << sport << "      ";
   for (int i = 0; i != 7; i++) {
-    if (car1 == false) {
+    if (car1Availability.at(i) == false) {
       cout << "x      ";
     } else {
       cout << "#      ";
@@ -34,7 +40,7 @@ void printWeeklySchedule() {
   }
   cout << endl << utility << "         ";
   for (int i = 0; i != 7; i++) {
-    if (car2 == false) {
+    if (car2Availability.at(i) == false) {
       cout << "x      ";
     } else {
       cout << "#      ";
@@ -42,7 +48,7 @@ void printWeeklySchedule() {
   }
   cout << endl << daily << "         ";
   for (int i = 0; i != 7; i++) {
-    if (car3 == false) {
+    if (car3Availability.at(i) == false) {
       cout << "x      ";
     } else {
       cout << "#      ";
@@ -50,7 +56,7 @@ void printWeeklySchedule() {
   }
   cout << endl << cool << "   ";
   for (int i = 0; i != 7; i++) {
-    if (car4 == false) {
+    if (car4Availability.at(i) == false) {
       cout << "x      ";
     } else {
       cout << "#      ";
@@ -58,7 +64,7 @@ void printWeeklySchedule() {
   }
   cout << endl << OffRoad << "          ";
   for (int i = 0; i != 7; i++) {
-    if (car5 == false) {
+    if (car5Availability.at(i) == false) {
       cout << "x      ";
     } else {
       cout << "#      ";
