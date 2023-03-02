@@ -2,8 +2,10 @@
  * Project III: Start here.
  */
 #pragma once
-using namespace std;
 #include <string>
+#include <iostream>
+using namespace std;
+
 
 string helloWorld();
 void loading();
