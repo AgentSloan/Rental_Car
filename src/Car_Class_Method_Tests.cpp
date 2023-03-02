@@ -11,11 +11,11 @@
 
 // Not Complete
 int main(){
-Car myCar(true);
+Car myCar(0, true);
 std::cout << "Testing Beginning" << std::endl;
-assert(myCar.getAvailability() == true);
-myCar.setAvailability(false);
-assert(myCar.getAvailability() == false);
+assert(myCar.getAvailability().at(0) == true);
+myCar.setAvailability(0, false);
+assert(myCar.getAvailability().at(0) == false);
 std::cout << "Testing Finished" << std::endl;
 
 return 0;

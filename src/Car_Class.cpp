@@ -18,7 +18,7 @@ private:
 
 public:
   // Public class methods to set and get the private class attributes
-  std::vector<bool> getAvailability() { return this->availability; }
+  std::vector<bool> getAvailability(int index) { return this->availability; }
   void setAvailability(int index, bool available) {
     this->availability.at(index) = available;
   }
