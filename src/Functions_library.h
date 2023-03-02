@@ -7,5 +7,5 @@ using namespace std;
 
 string helloWorld();
 void loading();
-
+void re_loading();
 void pringWeeklySchedule();
