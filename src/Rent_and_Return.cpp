@@ -1,6 +1,9 @@
 #include "Functions_library.h"
 #include <iostream>
 #include <vector>
+#include "Car_Class.cpp"
+
+
 void Rent(std::string car) {
   std::vector<bool>
       tempcar; // We be a list of instance of car class when finish
