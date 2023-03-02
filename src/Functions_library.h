@@ -11,3 +11,4 @@ string helloWorld();
 void loading();
 void re_loading();
 void pringWeeklySchedule();
+void menu();
