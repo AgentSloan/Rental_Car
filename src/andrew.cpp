@@ -74,9 +74,26 @@ void loading() {
   cout << endl;
   cout << "Your car is ready for pick up" << endl;
 }
+void re_loading() {
+  for (int i = 15, j = 0; i <= 115; i++) {
+    cout << endl << endl << endl << endl << endl << endl;
+    cout << endl << endl << endl << endl << endl << endl;
+    cout << setw(i) << "     _____     " << endl
+         << setw(i) << R"( ____|__|__\___ )" << endl
+         << setw(i) << "{______________}" << endl
+         << setw(i) << " <>         <>  " << endl;
+    cout << "Loading... " << j << "% complete " << endl;
+    j++;
+    this_thread::sleep_for(chrono::milliseconds(50));
+  }
+  cout << endl;
+  cout << "Your car is successfully returned" << endl;
+}
+
 
 // test call, can be deleted when implemented to main
 int main() {
-  menu();
+  re_loading();
+ // menu();
   return 0;
 }
