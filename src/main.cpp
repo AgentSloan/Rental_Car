@@ -7,5 +7,5 @@
 int main() {
   // Sample program
   menu();
-
+  return 0;
 }
