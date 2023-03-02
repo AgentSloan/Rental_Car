@@ -5,12 +5,17 @@
 
 
 void Rent(std::string car) {
+#include "Car_Class.h"
+
+
+void Rent(std::string car, std::string day) {
   std::vector<bool>
       tempcar; // We be a list of instance of car class when finish
   std::cout << "FIXME1" << std::endl;
   for (int i = 0; i < 5; i++) {
     tempcar.push_back(true);
   }
+  
 
   for (int i = 0; i < tempcar.size(); i++) { // Proof of idea will need to edit
     if (tempcar[i] == true) {

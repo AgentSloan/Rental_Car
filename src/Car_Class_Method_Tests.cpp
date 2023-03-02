@@ -7,11 +7,16 @@
 #include "Car_Class.h"
 #include <iostream>
 #include <string> 
+#include <assert.h>
 
 // Not Complete
 int main(){
 Car myCar(true);
-bool assert(myCar.getAvailability() == true);
+std::cout << "Testing Beginning" << std::endl;
+assert(myCar.getAvailability() == true);
+myCar.setAvailability(false);
+assert(myCar.getAvailability() == false);
+std::cout << "Testing Finished" << std::endl;
 
 return 0;
 }
