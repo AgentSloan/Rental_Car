@@ -32,7 +32,7 @@ void menu() {
       cout << "Your axpoximate total is <price of car>" << endl
            << "please confirm (y/n)" << endl;
       cin >> confirm;
-      if (confirm == 'n') {
+      if (confirm != 'y') {
         break;
       }
       loading();
@@ -91,8 +91,10 @@ void re_loading() {
 }
 
 // test call, can be deleted when implemented to main
-// int main() {
+int main() {
 //   // re_loading();
-//   menu();
-//   return 0;
-// }
+  menu();
+  return 0;
+}
+// hi 
+// this is the 100th line of code :)
