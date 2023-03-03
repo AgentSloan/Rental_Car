@@ -7,7 +7,7 @@ using namespace std;
 // tempcar will be a list of car instancest to run through
 double Rent(string car, int day) {
     int daysrented;
-  cout << "FIXME";
+  cout << "FIXME"<<std::endl;
   cout <<  "How many days are your renting your car"<< endl;
   cin >> daysrented;
   /*
@@ -51,7 +51,7 @@ void return_car() {
   }*/
 }
 int main() {
-  cout << Rent("honda ploiet", 1);
+  cout << Rent("honda ploiet", 1)<<std::endl;
   printAvailability(1);
   return_car();
   std::cout << "Test is done" << std::endl;
