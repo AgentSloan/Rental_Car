@@ -5,17 +5,17 @@
 using namespace std;
 
 // tempcar will be a list of car instancest to run through
-double Rent(string car, int day) {
+double Rent(string car, int day, std::vector <Car> tempcar) {
     int daysrented;
   cout << "FIXME"<<std::endl;
   cout <<  "How many days are your renting your car"<< endl;
   cin >> daysrented;
-  /*
+  
   for (int i = 0; i < tempcar.size(); i++) {
-    if (car == tempcar[i].getModel) {
+    if (car == tempcar[i].getModel()) {
       if (tempcar[i].getAvailability(day) == true) {
         for(int j =0; j < daysrented; i++){
-        tempcar[i].setAvailability(day+i, false)
+        tempcar[i].setAvailability(day+i, false);
         }
         return 10000.00;
       } else {
@@ -26,38 +26,33 @@ double Rent(string car, int day) {
   return 0;
 }
 
-void printAvailability(int day) { // to print avaalbal car to rent
+void printAvailability(int day, std::vector <Car> tempcar) { // to print avaalbal car to rent
   cout << "FIXME2" << std::endl;
-  /*
+  
 for (int i = 0; i < tempcar.size(); i++) {
   std::cout << "the avaiabliy cars are:" << std::endl;
   if (tempcar[i].getAvailability(day) == true) {
-    tempcar[i].printdetails;
+    //tempcar[i].printdetails();
+    cout << "Yes";
   }
-}*/
+}
 }
 
-void return_car() {
+void return_car(std::vector <Car> tempcar) {
   string car;
   cout << "FIXME3" << std::endl;
   cout << "PLease enter the model of your returned car" << std::endl;
   cin >> car;
-    /*
+    
   for (int i = 0; i < tempcar.size(); i++) {
     if (tempcar[i].getMake == car) {
       tempcar[i].setAvailability[placeholder] = true ;
       cout << "Your rented car is returned" << std::endl;
     }
-  }*/
+  }
 }
 int main() {
-  cout << Rent("honda ploiet", 1)<<std::endl;
-  printAvailability(1);
-  return_car();
-  std::cout << "Test is done" << std::endl;
-  return 0;
-
-  /*Car car1;
+    Car car1;
   car1.setMake("Car A");
   car1.setAvailability(0, true);
   Car car2;
@@ -78,5 +73,13 @@ int main() {
   tempcar.push_back(car3);
   tempcar.push_back(car4);
   tempcar.push_back(car5);
-  cout << (tempcar[0].getAvailability(0));*/
+
+
+  cout << Rent("Car D", 1, tempcar)<<std::endl;
+  printAvailability(1, tempcar);
+  return_car(tempcar);
+  std::cout << "Test is done" << std::endl;
+  return 0;
+
+  
 }
