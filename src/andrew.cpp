@@ -7,7 +7,7 @@
 #include <thread>
 using namespace std;
 
-void menu(vector<Car>) {
+void menu(vector<Car> ourCars) {
   char chose = '0';
   char confirm = 'n';
   string car = " ";
@@ -44,7 +44,7 @@ void menu(vector<Car>) {
            << "Your total is $<days_rented> * <price of car>" << endl;
       break;
     case '3':
-      cout << "The car avalible are <list cars to rent>" << endl;
+      cout << "The car avalible are:" << endl; 
       break;
     case '0':
       cout << "Goodbye :)" << endl;
