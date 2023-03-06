@@ -4,4 +4,15 @@
 #include <cstring>
 using namespace std;
 
-Car drr;
+Car chevyImpala;
+
+Car fordTaurus;
+
+Car volkswagenPassat;
+
+Car toyotaCarola;
+
+Car toyotaRav4;
+
+
+
