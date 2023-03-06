@@ -10,10 +10,10 @@ double Rent(string car, int day, std::vector <Car> tempcar) {
   cout << "FIXME"<<std::endl;
   cout <<  "How many days are your renting your car"<< endl;
   cin >> daysrented;
-  
+
   for (int i = 0; i < tempcar.size(); i++) {
     if (car == tempcar[i].getModel()) {
-      if (tempcar[i].getAvailability(day) == true) {
+      if ((tempcar[i].getAvailability(day)) == true) {
         for(int j =0; j < daysrented; i++){
         tempcar[i].setAvailability(day+i, false);
         }
@@ -45,7 +45,7 @@ void return_car(std::vector <Car> tempcar) {
   cin >> car;
     
   for (int i = 0; i < tempcar.size(); i++) {
-    if (tempcar[i].getMake == car) {
+    if (tempcar[i].getMake() == car) {
       tempcar[i].setAvailability[placeholder] = true ;
       cout << "Your rented car is returned" << std::endl;
     }
