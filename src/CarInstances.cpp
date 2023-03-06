@@ -7,7 +7,7 @@ using namespace std;
 Car chevyImpala;
 Car fordTaurus;
 Car volkswagenPassat;
-Car toyotaCarola;
+Car toyotaCorolla;
 Car hondaPilot;
 
 // Set vehicle Characteristics
@@ -18,25 +18,29 @@ int main() {
   for (int i = 0; i != 7; i++) {
     chevyImpala.setAvailability(i, true);
   }
-  fordTaurus.setMake("Chevy");
-  fordTaurus.setModel("Impala");
+  fordTaurus.setMake("Ford");
+  fordTaurus.setModel("Taurus");
   for (int i = 0; i != 7; i++) {
     fordTaurus.setAvailability(i, true);
   }
-  volkswagenPassat.setMake("Chevy");
-  volkswagenPassat.setModel("Impala");
+  volkswagenPassat.setMake("Volkswagen");
+  volkswagenPassat.setModel("Passat");
   for (int i = 0; i != 7; i++) {
     volkswagenPassat.setAvailability(i, true);
   }
-  toyotaCarola.setMake("Chevy");
-  toyotaCarola.setModel("Impala");
+  toyotaCorolla.setMake("Chevy");
+  toyotaCorolla.setModel("Impala");
   for (int i = 0; i != 7; i++) {
-    toyotaCarola.setAvailability(i, true);
+    toyotaCorolla.setAvailability(i, true);
   }
   hondaPilot.setMake("Chevy");
   hondaPilot.setModel("Impala");
   for (int i = 0; i != 7; i++) {
     hondaPilot.setAvailability(i, true);
+  }
+
+  for (int i = 0; i != 7; i++) {
+    cout << hondaPilot.getAvailability(i);
   }
   return 0;
 }

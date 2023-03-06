@@ -1,14 +1,14 @@
-#include "Car_Class.h"
+#include "CarInstances.cpp"
 #include "Functions_library.h"
 #include <cstring>
 #include <iostream>
 using namespace std;
 // THIS IS FOR THE FINAL CODE <D
-// vector<bool> car1Availability = car1.getAvailability();
-// vector<bool> car2Availability = car2.getAvailability();
-// vector<bool> car3Availability = car3.getAvailability();
-// vector<bool> car4Availability = car4.getAvailability();
-// vector<bool> car5Availability = car5.getAvailability();
+vector<bool> car1Availability = chevyImpala.getAvailability();
+vector<bool> car2Availability = fordTaurus.getAvailability();
+vector<bool> car3Availability = volkswagenPassat.getAvailability();
+vector<bool> car4Availability = toyotaCarola.getAvailability();
+vector<bool> car5Availability = hondaPilot.getAvailability();
 
 // Create dummy variables
 // Define Availiabilty vecot
@@ -17,11 +17,11 @@ using namespace std;
 // vector<bool> car3Availability{true, false, false, false, false, false, true};
 // vector<bool> car4Availability{true, false, false, false, false, false, true};
 // vector<bool> car5Availability{true, true, true, true, true, true, false};
-string model1 = getModel();
-string model2 = "F-150";
-string model3 = "Jeep";
-string model4 = "Tesla";
-string model5 = "mazda furia";
+string model1 = chevyImpala.getModel();
+string model2 = fordTaurus.getModel();
+string model3 = volkswagenPassat.getModel();
+string model4 = toyotaCarola.getModel();
+string model5 = hondaPilot.getModel();
 
 // Define print weekly schedule Function
 
