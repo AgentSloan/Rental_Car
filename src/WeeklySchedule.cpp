@@ -2,6 +2,7 @@
 #include "Functions_library.h"
 #include <cstring>
 #include <iostream>
+#include <vector>
 using namespace std;
 // THIS IS FOR THE FINAL CODE <D
 vector<bool> car1Availability = chevyImpala.getAvailability();
@@ -26,7 +27,7 @@ string model5 = hondaPilot.getModel();
 // Define print weekly schedule Function
 
 void printWeeklySchedule() {
-  cout << "  Rental Availability (Weekly) # = Available, x = Unavailable"
+  cout << "  Rental Availability (Weekly) ✔ = Available, x = Unavailable"
        << endl
        << "==============================================================="
        << endl

@@ -43,6 +43,9 @@ int main() {
   }
   vector<Car> CarInstances{chevyImpala, fordTaurus, volkswagenPassat,
                            toyotaCorolla, hondaPilot};
-  menu(CarInstances);
+  for (int i = 0; i != 5; i++) {
+    cout << CarInstances[i].getMake();
+  }
+  // menu(CarInstances);
   return 0;
 }
