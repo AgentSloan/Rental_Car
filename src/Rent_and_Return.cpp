@@ -40,6 +40,7 @@ void return_car(std::vector<Car> tempcar) {
     }
   }
 }
+/*
 int main() {
   Car car1;
   car1.setMake("Car A");
@@ -67,4 +68,4 @@ int main() {
   return_car(tempcar);
   std::cout << "Test is done" << std::endl;
   return 0;
-}
+}*/
