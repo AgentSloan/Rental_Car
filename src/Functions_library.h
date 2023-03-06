@@ -40,6 +40,4 @@ string helloWorld();
 void loading();
 void re_loading();
 void pringWeeklySchedule();
-void menu();
-double Rent(string car, int day);
-void return_car();
+void menu(vector<Car>);
