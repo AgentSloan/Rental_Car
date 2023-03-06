@@ -1,5 +1,6 @@
-#include "main.cpp"
+
 #include "Functions_library.h"
+#include "WeedlySchedule.h"
 #include <cstring>
 #include <iostream>
 #include <vector>
