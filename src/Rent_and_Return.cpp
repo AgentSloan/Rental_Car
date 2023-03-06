@@ -27,19 +27,6 @@ double Rent(string car, int day, std::vector<Car> tempcar) {
   return 0;
 }
 
-void printAvailability(
-    int day, std::vector<Car> tempcar) { // to print avaalbal car to rent
-  cout << "FIXME2" << std::endl;
-/*
-  for (int i = 0; i < tempcar.size(); i++) {
-    std::cout << "the avaiabliy cars are:" << std::endl;
-    if (tempcar[i].getAvailability(day) == true) {
-      // tempcar[i].printdetails();
-      cout << "Yes";
-    }
-  }*/
-}
-
 void return_car(std::vector<Car> tempcar) {
   string car;
   cout << "FIXME3" << std::endl;
@@ -77,7 +64,6 @@ int main() {
   tempcar.push_back(car5);
 
   cout << Rent("Car D", 1, tempcar) << std::endl;
-  printAvailability(1, tempcar);
   return_car(tempcar);
   std::cout << "Test is done" << std::endl;
   return 0;
