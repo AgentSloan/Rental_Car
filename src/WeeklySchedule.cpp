@@ -1,4 +1,4 @@
-#include "CarInstances.cpp"
+#include "main.cpp"
 #include "Functions_library.h"
 #include <cstring>
 #include <iostream>
@@ -7,7 +7,7 @@ using namespace std;
 vector<bool> car1Availability = chevyImpala.getAvailability();
 vector<bool> car2Availability = fordTaurus.getAvailability();
 vector<bool> car3Availability = volkswagenPassat.getAvailability();
-vector<bool> car4Availability = toyotaCarola.getAvailability();
+vector<bool> car4Availability = toyotaCorolla.getAvailability();
 vector<bool> car5Availability = hondaPilot.getAvailability();
 
 // Create dummy variables
@@ -20,7 +20,7 @@ vector<bool> car5Availability = hondaPilot.getAvailability();
 string model1 = chevyImpala.getModel();
 string model2 = fordTaurus.getModel();
 string model3 = volkswagenPassat.getModel();
-string model4 = toyotaCarola.getModel();
+string model4 = toyotaCorolla.getModel();
 string model5 = hondaPilot.getModel();
 
 // Define print weekly schedule Function
@@ -72,9 +72,4 @@ void printWeeklySchedule() {
     }
   }
   cout << endl;
-}
-
-int main() {
-  printWeeklySchedule();
-  return 0;
 }

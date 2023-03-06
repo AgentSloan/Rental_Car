@@ -13,6 +13,7 @@ Car hondaPilot;
 
 // Set vehicle Characteristics
 int main() {
+  menu();
   // Modify the Class Attributes
   chevyImpala.setMake("Chevy");
   chevyImpala.setModel("Impala");
@@ -39,5 +40,7 @@ int main() {
   for (int i = 0; i != 7; i++) {
     hondaPilot.setAvailability(i, true);
   }
+
+  printWeeklySchedule();
   return 0;
 }
