@@ -39,5 +39,5 @@ public:
 string helloWorld();
 void loading();
 void re_loading();
-void pringWeeklySchedule();
+void printWeeklySchedule();
 void menu(vector<Car>);

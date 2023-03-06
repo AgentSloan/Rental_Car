@@ -39,5 +39,7 @@ int main() {
   for (int i = 0; i != 7; i++) {
     hondaPilot.setAvailability(i, true);
   }
+
+  printWeeklySchedule();
   return 0;
 }
