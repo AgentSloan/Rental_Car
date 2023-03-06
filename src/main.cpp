@@ -13,6 +13,7 @@ Car hondaPilot;
 
 // Set vehicle Characteristics
 int main() {
+  menu();
   // Modify the Class Attributes
   chevyImpala.setMake("Chevy");
   chevyImpala.setModel("Impala");
