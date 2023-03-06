@@ -9,19 +9,15 @@ using namespace std;
 // vector<bool> car3Availability = car3.getAvailability();
 // vector<bool> car4Availability = car4.getAvailability();
 // vector<bool> car5Availability = car5.getAvailability();
+
 // Create dummy variables
-Car car1;
-Car car2;
-Car car3;
-Car car4;
-Car car5;
 // Define Availiabilty vecot
 // vector<bool> car1Availability{true, true, false, true, true, true, true};
 // vector<bool> car2Availability{true, true, false, false, false, false, true};
 // vector<bool> car3Availability{true, false, false, false, false, false, true};
 // vector<bool> car4Availability{true, false, false, false, false, false, true};
 // vector<bool> car5Availability{true, true, true, true, true, true, false};
-string model1 = "Corvette";
+string model1 = getModel();
 string model2 = "F-150";
 string model3 = "Jeep";
 string model4 = "Tesla";

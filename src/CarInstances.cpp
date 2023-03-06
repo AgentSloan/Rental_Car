@@ -5,14 +5,10 @@ using namespace std;
 
 // Create Rental car objects
 Car chevyImpala;
-
 Car fordTaurus;
-
 Car volkswagenPassat;
-
 Car toyotaCarola;
-
-Car toyotaRav4;
+Car hondaPilot;
 
 // Set vehicle Characteristics
 int main() {
@@ -37,10 +33,10 @@ int main() {
   for (int i = 0; i != 7; i++) {
     toyotaCarola.setAvailability(i, true);
   }
-  toyotaRav4.setMake("Chevy");
-  toyotaRav4.setModel("Impala");
+  hondaPilot.setMake("Chevy");
+  hondaPilot.setModel("Impala");
   for (int i = 0; i != 7; i++) {
-    toyotaRav4.setAvailability(i, true);
+    hondaPilot.setAvailability(i, true);
   }
   return 0;
 }
