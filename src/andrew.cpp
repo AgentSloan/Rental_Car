@@ -8,7 +8,7 @@
 #include <thread>
 using namespace std;
 
-void menu() {
+void menu(vector<Car>) {
   char chose = '0';
   char confirm = 'n';
   string car = " ";
@@ -37,7 +37,6 @@ void menu() {
       }
       loading();
       // the whole point is to rent a car if that is done then should it exit?
-      exit(0);
       break;
     case '2':
       // calls a fuction to return a car
