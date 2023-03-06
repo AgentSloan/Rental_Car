@@ -28,19 +28,15 @@ int main() {
   for (int i = 0; i != 7; i++) {
     volkswagenPassat.setAvailability(i, true);
   }
-  toyotaCorolla.setMake("Chevy");
-  toyotaCorolla.setModel("Impala");
+  toyotaCorolla.setMake("Toyota");
+  toyotaCorolla.setModel("Corolla");
   for (int i = 0; i != 7; i++) {
     toyotaCorolla.setAvailability(i, true);
   }
-  hondaPilot.setMake("Chevy");
-  hondaPilot.setModel("Impala");
+  hondaPilot.setMake("Honda");
+  hondaPilot.setModel("Pilot");
   for (int i = 0; i != 7; i++) {
     hondaPilot.setAvailability(i, true);
-  }
-
-  for (int i = 0; i != 7; i++) {
-    cout << hondaPilot.getAvailability(i);
   }
   return 0;
 }
