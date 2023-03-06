@@ -1,4 +1,3 @@
-#include "Car_Class.h"
 #include "Functions_library.h"
 #include <chrono>
 #include <iomanip>
@@ -90,10 +89,10 @@ void re_loading() {
 }
 
 // test call, can be deleted when implemented to main
-int main() {
-//   // re_loading();
-  menu();
-  return 0;
-}
+// int main() {
+// //   // re_loading();
+//   menu();
+//   return 0;
+// }
 // hi 
 // this is the 100th line of code :)
