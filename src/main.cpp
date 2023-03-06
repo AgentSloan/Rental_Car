@@ -40,6 +40,6 @@ int main() {
     hondaPilot.setAvailability(i, true);
   }
   vector<Car> CarInstances{chevyImpala, fordTaurus, volkswagenPassat, toyotaCorolla, hondaPilot};
-  menu();
+  menu(CarInstances);
   return 0;
 }
