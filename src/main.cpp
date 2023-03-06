@@ -3,6 +3,8 @@
  */
 #include "Functions_library.h"
 #include <iostream>
+#include <vector>
+using namespace std;
 
 // Create Rental car objects
 Car chevyImpala;
@@ -39,7 +41,8 @@ int main() {
   for (int i = 0; i != 7; i++) {
     hondaPilot.setAvailability(i, true);
   }
-  vector<Car> CarInstances{chevyImpala, fordTaurus, volkswagenPassat, toyotaCorolla, hondaPilot};
+  vector<Car> CarInstances{chevyImpala, fordTaurus, volkswagenPassat,
+                           toyotaCorolla, hondaPilot};
   menu(CarInstances);
   return 0;
 }
