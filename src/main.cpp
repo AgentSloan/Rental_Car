@@ -49,7 +49,6 @@ int main() {
   for (int i = 0; i != 5; i++) {
     cout << CarInstances[i].getMake();
   }
-  printWeeklySchedule();
   menu(CarInstances);
   return 0;
 }
