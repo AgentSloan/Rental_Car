@@ -9,6 +9,8 @@ private:
   std::vector<bool> availability;
   std::string make;
   std::string model;
+  int daysRented = 0;
+  double price;
 
 public:
   // Constructors and public class methods to set and get the private class attributes
@@ -27,4 +29,12 @@ public:
   void setMake(std::string make) { this->make = make; }
   std::string getModel() { return this->model; }
   void setModel(std::string model) { this->model = model; }
+  void setDaysRented(int days){
+      this->daysRented = days;
+  }
+  int getDaysRented(){ return this->daysRented; }
+  void setPrice(double price){
+      this->price = price;
+  }
+  double getPrice(){ return this->price; }
 };
