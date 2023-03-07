@@ -6,11 +6,12 @@
 #include <vector>
 using namespace std;
 // THIS IS FOR THE FINAL CODE <D
-vector<bool> car1Availability = chevyImpala.getAvailability();
-vector<bool> car2Availability = fordTaurus.getAvailability();
-vector<bool> car3Availability = volkswagenPassat.getAvailability();
-vector<bool> car4Availability = toyotaCorolla.getAvailability();
-vector<bool> car5Availability = hondaPilot.getAvailability();
+
+vector<bool> car1Availability ;//= chevyImpala.getAvailability();
+vector<bool> car2Availability ;//= fordTaurus.getAvailability();
+vector<bool> car3Availability ;//= volkswagenPassat.getAvailability();
+vector<bool> car4Availability ;//= toyotaCorolla.getAvailability();
+vector<bool> car5Availability ;//= hondaPilot.getAvailability();
 
 // Create dummy variables
 // Define Availiabilty vecot
@@ -19,11 +20,12 @@ vector<bool> car5Availability = hondaPilot.getAvailability();
 // vector<bool> car3Availability{true, false, false, false, false, false, true};
 // vector<bool> car4Availability{true, false, false, false, false, false, true};
 // vector<bool> car5Availability{true, true, true, true, true, true, false};
-string model1 = chevyImpala.getModel();
-string model2 = fordTaurus.getModel();
-string model3 = volkswagenPassat.getModel();
-string model4 = toyotaCorolla.getModel();
-string model5 = hondaPilot.getModel();
+
+string model1 ;//= chevyImpala.getModel();
+string model2 ;//= fordTaurus.getModel();
+string model3 ;//= volkswagenPassat.getModel();
+string model4 ;//= toyotaCorolla.getModel();
+string model5 ;//= hondaPilot.getModel();
 
 // Define print weekly schedule Function
 
