@@ -35,7 +35,7 @@ public:
   void setModel(std::string model) { this->model = model; }
 };*/
 
-
+/*
 string helloWorld();
 void loading();
 void re_loading();
@@ -43,3 +43,4 @@ void printWeeklySchedule();
 void menu(vector<Car>);
 double Rent(string car, int day, std::vector<Car> tempcar);
 void return_car(std::vector<Car> tempcar);
+*/
