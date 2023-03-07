@@ -45,7 +45,7 @@ int main() {
     hondaPilot.setAvailability(i, true);
   }
   vector<Car> CarInstances{chevyImpala, fordTaurus, volkswagenPassat,
-                           toyotaCorolla, hondaPilot};
+                           toyotaCorolla, hondaPilot};// Useing to debug Kolby
   for (int i = 0; i != 5; i++) {
     cout << CarInstances[i].getMake();
   }

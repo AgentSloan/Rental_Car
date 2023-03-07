@@ -15,8 +15,9 @@ double Rent(string car, int day, std::vector<Car> tempcar) {
   for (int i = 0; i < tempcar.size(); i++) {
     if (car == tempcar[i].getModel()) {
       if (tempcar[i].getAvailability(day) == true) {
-        for (int j = 0; j < daysrented; i++) {
+        for (int j = 0; j < daysrented ; i++) {
           tempcar[i].setAvailability(day + j, false);
+          tempcar[i].setDaysRented(daysrented);
         }
         return 10000.00;
       } else {
