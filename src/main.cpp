@@ -3,6 +3,7 @@
  */
 //#include "Functions_library.h"
 #include <iostream>
+#include <ostream>
 #include <vector>
 #include "menu.h"
 #include "Rent_and_Return.h"
@@ -47,7 +48,7 @@ int main() {
   vector<Car> CarInstances{chevyImpala, fordTaurus, volkswagenPassat,
                            toyotaCorolla, hondaPilot};// Useing to debug Kolby
   for (int i = 0; i != 5; i++) {
-    cout << CarInstances[i].getMake();
+    cout <<CarInstances[i].getMake() <<" "<< CarInstances[i].getAvailability(i)<< endl;
   }
   menu(CarInstances);
   return 0;
