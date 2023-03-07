@@ -3,19 +3,21 @@
 #include <iostream>
 #include <vector>
 #include "Car_Class.h"
-using namespace std;
+using namespace std;  //g++ main.cpp menu.cpp Rent_and_Return.cpp WeeklySchedule.cpp -o a.out to run code
 
 // tempcar will be a list of car instancest to run through
 double Rent(string car, int day, std::vector<Car> tempcar) {
   int daysrented;
-  cout << "FIXME" << std::endl;
   cout << "How many days are your renting your car" << endl;
   cin >> daysrented;
 
   for (int i = 0; i < tempcar.size(); i++) {
     if (car == tempcar[i].getModel()) {
+        cout << "Rent test 1";
       if (tempcar[i].getAvailability(day) == true) {
+          cout << "Rent test 2";
         for (int j = 0; j < daysrented ; i++) {
+            cout << "Rent test 3";
           tempcar[i].setAvailability(day + j, false);
           tempcar[i].setDaysRented(daysrented);
         }
@@ -25,7 +27,7 @@ double Rent(string car, int day, std::vector<Car> tempcar) {
       }
     }
   }
-  return -2; // Car is not somthing we have or is missed typed*/
+  return -2; // Car is not somthing we have or is missed typed
   return 0;
 }
 
