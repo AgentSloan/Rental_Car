@@ -48,7 +48,7 @@ int main() {
   vector<Car> CarInstances{chevyImpala, fordTaurus, volkswagenPassat,
                            toyotaCorolla, hondaPilot};// Useing to debug Kolby
   for (int i = 0; i != 5; i++) {
-    cout <<CarInstances[i].getMake() <<" "<< CarInstances[i].getAvailability(i)<< endl;
+    cout <<CarInstances[i].getMake() <<" "<< CarInstances[i].getAvailability(0)<< endl;
   }
   menu(CarInstances);
   return 0;
