@@ -1,4 +1,4 @@
-SRCS = src/library.cpp menu.cpp Rent_and_Return.cpp WeeklySchedule.cpp
+SRCS = src/library.cpp menu.cpp Rent_and_Return.cpp WeeklySchedule.cpp main.cpp
 EXE = a.out
 SUBMITTY_CXXFLAGS = -I.
 
