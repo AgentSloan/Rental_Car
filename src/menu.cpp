@@ -1,5 +1,6 @@
 //#include "Functions_library.h"
 #include "menu.h"
+#include "Rent_and_Return.h"
 #include <chrono>
 #include <iomanip>
 #include <iostream>
@@ -11,6 +12,7 @@ using namespace std;
 void menu(vector<Car> ourCars) {
   char chose = '0';
   char confirm = 'n';
+  int test;
   string car = " ";
   cout << "=====Welcome to KArL & J Rental=====" << endl;
   do {
@@ -28,8 +30,8 @@ void menu(vector<Car> ourCars) {
       cout << "please pick from availible cars typing the car's name" << endl;
       // calls the cars availible function
       cin >> car;
-      // calls the price function when added
-      cout << "Your axpoximate total is <price of car>" << endl
+      test = Rent(car, 0, ourCars);
+      cout << "Your axpoximate total is "<< test << endl
            << "please confirm (y/n)" << endl;
       cin >> confirm;
       if (confirm != 'y') {
@@ -45,7 +47,7 @@ void menu(vector<Car> ourCars) {
            << "Your total is $<days_rented> * <price of car>" << endl;
       break;
     case '3':
-      cout << "The car avalible are:" << endl; 
+      cout << "The car avalible are:" << endl;
       break;
     case '0':
       cout << "Goodbye :)" << endl;
@@ -95,5 +97,5 @@ void re_loading() {
 //   menu();
 //   return 0;
 // }
-// hi 
+// hi
 // this is the 100th line of code :)
