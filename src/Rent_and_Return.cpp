@@ -1,5 +1,5 @@
 //#include "Car_Class.h"
-#include "Functions_library.h"
+//#include "Functions_library.h"
 #include <iostream>
 #include <vector>
 #include "Car_Class.h"
@@ -10,8 +10,9 @@ double Rent(string car, int day, std::vector<Car> tempcar) {
   int daysrented =0;
   //cout << "How many days are your renting your car" << endl;
   //cin >> daysrented;
-
+    cout << "Rent test 0";
   for (int i = 0; i < tempcar.size(); i++) {
+      cout << tempcar[i].getMake();
     if (car == tempcar[i].getModel()) {
         cout << "Rent test 1";
       if (tempcar[i].getAvailability(day) == true) {

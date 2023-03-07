@@ -91,7 +91,7 @@ void re_loading() {
   cout << "Your car is successfully returned" << endl;
 }
 
-// // test call, can be deleted when implemented to main
+// test call, can be deleted when implemented to main
 // int main() {
 // //   // re_loading();
 //   menu();
