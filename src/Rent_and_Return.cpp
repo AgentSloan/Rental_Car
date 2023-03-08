@@ -25,7 +25,7 @@ double Rent(string car, int day, vector<Car> tempcar) {
             return 100.00; // tempcar[i].getPrice();
           } else {
             cout << "Sorry this car is not avabile please try again" << endl;
-            return -1; // Requested car is not avalable
+            return -1;
           }
         } else {
           cout << "Sorry you can only rent with in the current week" << endl;
