@@ -46,9 +46,15 @@ void return_car(vector<Car> tempcar) {
   cin >> car;
   int temp = 0;
   for (int i = 0; i < tempcar.size(); i++) {
-    if (tempcar[i].getMake() == car) {
-      tempcar[i].setAvailability(temp, true);
+    if (tempcar[i].getModel() == car) {
+        for (int j = 0; j < tempcar[i].getDaysRented(); j++) {
+            tempcar[i].setAvailability(j, true);
+        }
       cout << "Your rented car is returned" << std::endl;
+      cout << tempcar[i].getDaysRented() << endl;
+      for (int h = 0; h < 7; h++) {
+      cout << tempcar[i].getAvailability(h) << endl;
+      }
     }
   }
 }
