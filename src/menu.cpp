@@ -30,7 +30,7 @@ void menu(vector<Car> ourCars) {
       cout << "please pick from availible cars typing the car's name" << endl;
       // calls the cars availible function
       cin >> car;
-      test = Rent(car, 0, ourCars);
+      test = Rent(car, 1, ourCars);
       cout << "Your axpoximate total is "<< test << endl
            << "please confirm (y/n)" << endl;
       cin >> confirm;

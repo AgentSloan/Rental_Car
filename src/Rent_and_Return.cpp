@@ -38,7 +38,7 @@ double Rent(string car, int day, vector<Car> tempcar) {
   }
   return -1;
 }
-
+// to return a car
 void return_car(vector<Car> tempcar) {
   string car;
   string responce;
