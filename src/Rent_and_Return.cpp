@@ -1,5 +1,3 @@
-//#include "Car_Class.h"
-//#include "Functions_library.h"
 #include "Car_Class.h"
 #include <iostream>
 #include <vector>
@@ -64,32 +62,3 @@ void return_car(vector<Car> tempcar) {
     }
   }
 }
-/*
-int main() {
-  Car car1;
-  car1.setMake("Car A");
-  car1.setAvailability(0, true);
-  Car car2;
-  car2.setMake("Car B");
-  car2.setAvailability(0, true);
-  Car car3;
-  car3.setMake("Car C");
-  car3.setAvailability(0, true);
-  Car car4;
-  car4.setMake("Car D");
-  car4.setAvailability(0, true);
-  Car car5;
-  car4.setMake("Car E");
-  car4.setAvailability(0, true);
-  std::vector<Car> tempcar;
-  tempcar.push_back(car1);
-  tempcar.push_back(car2);
-  tempcar.push_back(car3);
-  tempcar.push_back(car4);
-  tempcar.push_back(car5);
-
-  cout << Rent("Car D", 1, tempcar) << std::endl;
-  return_car(tempcar);
-  std::cout << "Test is done" << std::endl;
-  return 0;
-}*/
