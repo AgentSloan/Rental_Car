@@ -25,7 +25,7 @@ double Rent(string car, int day, vector<Car> tempcar) {
             return 100.00; // tempcar[i].getPrice();
           } else {
             cout << "Sorry this car is not avabile please try again" << endl;
-            return -1;
+            return -1; // Requested car is not avalable
           }
         } else {
           cout << "Sorry you can only rent with in the current week" << endl;
@@ -42,7 +42,7 @@ double Rent(string car, int day, vector<Car> tempcar) {
 void return_car(vector<Car> tempcar) {
   string car;
   string responce;
-  cout << "PLease enter the model of your returned car" << std::endl;
+  cout << "Please enter the model of your returned car" << std::endl;
   cin >> car;
   int temp = 0;
   for (int i = 0; i < tempcar.size(); i++) {
@@ -59,9 +59,8 @@ void return_car(vector<Car> tempcar) {
         tempcar[i].setDaysRented(0);
         cout << "Your rented car is returned" << std::endl;
       }
-    } else {
-      cout << "Sorry that is not one of our cars." << endl;
-      return;
     }
+    cout << "Sorry that is not one of our cars." << endl;
   }
+  
 }
