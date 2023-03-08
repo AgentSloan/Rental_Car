@@ -6,35 +6,42 @@
 using namespace std;  //g++ main.cpp menu.cpp Rent_and_Return.cpp WeeklySchedule.cpp -o a.out to run code
 
 // tempcar will be a list of car instancest to run through
-double Rent(string car, int day, std::vector<Car> tempcar) {
-  int daysrented =0;
-  //cout << "How many days are your renting your car" << endl;
-  //cin >> daysrented;
-    cout << "Rent test 0";
+double Rent(string car, int day, vector<Car> tempcar) {
+  int daysrented = 0;
+  cout << "How many days are your renting your car" << endl;
+  cin >> daysrented;
+  cout << "Rent test " << endl;
   for (int i = 0; i < tempcar.size(); i++) {
-      cout << tempcar[i].getMake();
+    cout << "Rent test 0" << endl;
+    cout << tempcar[i].getModel() << endl;
     if (car == tempcar[i].getModel()) {
-        cout << "Rent test 1";
-      if (tempcar[i].getAvailability(day) == true) {
-          cout << "Rent test 2";
-        for (int j = 0; j <= daysrented ; i++) {
-            cout << "Rent test 3";
-          tempcar[i].setAvailability(day + j, false);
-          tempcar[i].setDaysRented(daysrented);
+      cout << "Rent test 1" << endl;
+      if (day >= 0 && day < 7) {
+          cout<< "Rent Test 1.5";
+        if (tempcar[i].getAvailability(day) == true) {
+          cout << "Rent test 2"<<endl;
+          for (int j = 1; j <= daysrented; j++) {
+            cout << "Rent test 3"<<endl;
+            tempcar[i].setAvailability(day, false);
+            tempcar[i].setDaysRented(daysrented);
+            cout << tempcar[i].getDaysRented();
+          }
+          return 100.00;
+        } else {
+          return -1; // Requested car is not avalable
         }
-        return 10000.00;
       } else {
-        return -1; // Requested car is not avalable
+        cout << "Sorry that is out side of the week" << endl;
+        return 0;
       }
     }
   }
   return -2; // Car is not somthing we have or is missed typed
-  return 0;
 }
 
-void return_car(std::vector<Car> tempcar) {
+void return_car(vector<Car> tempcar) {
   string car;
-  cout << "FIXME3" << std::endl;
+  cout << "FIXME3" << endl;
   cout << "PLease enter the model of your returned car" << std::endl;
   cin >> car;
   int temp = 0;
