@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std; // g++ main.cpp menu.cpp Rent_and_Return.cpp WeeklySchedule.cpp -o a.out to run code
 
-// tempcar will be a list of car instancest to run through
+// Use to Rent a car till end of week
 double Rent(string car, int day, vector<Car> tempcar) {
   bool repeat = true;
   day = day - 1;
