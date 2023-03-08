@@ -6,6 +6,7 @@ using namespace std; // g++ main.cpp menu.cpp Rent_and_Return.cpp WeeklySchedule
 // tempcar will be a list of car instancest to run through
 double Rent(string car, int day, vector<Car> tempcar) {
   bool repeat = true;
+  day = day - 1;
   while (repeat == true) {
 
     int DaysRented;
@@ -30,11 +31,10 @@ double Rent(string car, int day, vector<Car> tempcar) {
           cout << "Sorry you can only rent with in the current week" << endl;
           return -1;
         }
-      } else {
-        cout << "Sorry that is not a car we have try again" << endl;
-        return -1;
       }
     }
+    cout << "Sorry that is not a car we have try again" << endl;
+    return -1;
   }
   return -1;
 }
@@ -59,6 +59,9 @@ void return_car(vector<Car> tempcar) {
         tempcar[i].setDaysRented(0);
         cout << "Your rented car is returned" << std::endl;
       }
+    } else {
+      cout << "Sorry that is not one of our cars." << endl;
+      return;
     }
   }
 }
