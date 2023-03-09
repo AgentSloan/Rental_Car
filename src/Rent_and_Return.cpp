@@ -19,8 +19,8 @@ double Rent(string car, int day, vector<Car>& tempcar) {
             for (int j = 1; j < DaysRented; j++) {
               tempcar[i].setAvailability((day+ j), false);
               tempcar[i].setDaysRented(DaysRented);
-              cout << tempcar[i].getModel() << " " << tempcar[i].getDaysRented()
-                   << endl;
+              //cout << tempcar[i].getModel() << " " << tempcar[i].getDaysRented()
+                //   << endl;
             }
             return 100.00; // tempcar[i].getPrice();
           } else {
