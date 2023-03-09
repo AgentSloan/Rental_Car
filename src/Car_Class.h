@@ -1,3 +1,9 @@
+/* File: Car_Class.h
+   Description: Contains the Car class intended for use with rental car project
+   Author: Josh Bielas
+   Date: 3/8/2023
+*/
+
 #pragma once
 #include <string>
 #include <iostream>
