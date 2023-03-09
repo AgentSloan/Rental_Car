@@ -1,7 +1,8 @@
 #include "Car_Class.h"
 #include <iostream>
 #include <vector>
-using namespace std; // g++ main.cpp menu.cpp Rent_and_Return.cpp WeeklySchedule.cpp -o a.out to run code
+using namespace std; // g++ main.cpp menu.cpp Rent_and_Return.cpp
+                     // WeeklySchedule.cpp -o a.out to run code
 
 // Use to Rent a car till end of week
 double Rent(string car, int day, vector<Car> tempcar) {
@@ -58,9 +59,9 @@ void return_car(vector<Car> tempcar) {
         }
         tempcar[i].setDaysRented(0);
         cout << "Your rented car is returned" << std::endl;
+        return;
       }
     }
-    cout << "Sorry that is not one of our cars." << endl;
   }
-  
+  cout << "Sorry that is not one of our cars." << endl;
 }
