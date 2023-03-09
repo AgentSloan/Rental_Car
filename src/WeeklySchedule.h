@@ -1,3 +1,4 @@
 #pragma once
 #include "Car_Class.h"
-void printWeeklySchedule();
+
+void printWeeklySchedule(vector<Car>);

@@ -11,11 +11,12 @@
 using namespace std;
 
 // Create Rental car objects
+
 Car chevyImpala;
-Car fordTaurus;
-Car volkswagenPassat;
-Car toyotaCorolla;
-Car hondaPilot;
+  Car fordTaurus;
+  Car volkswagenPassat;
+  Car toyotaCorolla;
+  Car hondaPilot;
 
 // Set vehicle Characteristics
 int main() {

@@ -48,7 +48,7 @@ void menu(vector<Car> ourCars) {
            << "Your total is $<days_rented> * <price of car>" << endl;
       break;
     case '3':
-      printWeeklySchedule();
+      printWeeklySchedule(ourCars);
       break;
     case '0':
       cout << "Goodbye :)" << endl;
