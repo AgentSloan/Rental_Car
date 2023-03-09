@@ -31,12 +31,12 @@ void menu(vector<Car> ourCars) {
 
       cout << "Please pick from availible cars typing the car's name" << endl;
       printWeeklySchedule(ourCars);
-      if (printWeeklySchedule(ourCars) == -1){
-          cout << "Car not found" << endl;
-      }
+    //   if (printWeeklySchedule(ourCars) == -1) {
+    //     cout << "Car not found" << endl;
+    //   }
       cout << "Enter in Day of week Sun-saturday (1-7)" << endl;
       cin >> day;
-    
+
       test = Rent(car, day, ourCars);
       cout << "Your axpoximate total is " << test << endl
            << "please confirm (y/n)" << endl;
@@ -48,7 +48,7 @@ void menu(vector<Car> ourCars) {
       // the whole point is to rent a car if that is done then should it exit?
       break;
     case '2':
-      return_car(ourCars,day);
+      return_car(ourCars, day);
       re_loading();
       cout << "Thank You :) " << endl
            << "Your total is $<days_rented> * <price of car>" << endl;
