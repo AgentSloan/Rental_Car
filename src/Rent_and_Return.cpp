@@ -55,7 +55,7 @@ void return_car(vector<Car> &tempcar, int day) {
       cout << "Please confirm this is the correct car(y/n)";
       cin >> responce;
       if (responce == "y") {
-        for (int j = 0; j <= tempcar[i].getDaysRented(); j++) {
+        for (int j = -1; j <= tempcar[i].getDaysRented(); j++) {
           tempcar[i].setAvailability((j + day), true);
         }
         tempcar[i].setDaysRented(0);
