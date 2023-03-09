@@ -32,7 +32,7 @@ void menu(vector<Car> ourCars) {
       cout << "Please pick from availible cars typing the car's name" << endl;
       // calls the cars availible function
       cin >> car;
-      cout << "Enter in Day of week Sun-saturday (1-7)" << endl;
+      cout << "Enter in Day of week Sun-Friday (1-6)" << endl;
       cin >> day;
 
       test = Rent(car, day, ourCars);
