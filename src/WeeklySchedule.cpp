@@ -36,7 +36,7 @@ void printWeeklySchedule() {
        << endl
        << "----------|  Sun.   Mon.   Tue.   Wed.   Thu.   Fri.   Sat." << endl
        << model1 << "      ";
-  for (int i = 0; i != 7; i++) {
+  for (int i = 0; i <= 7; i++) {
     if (car1Availability.at(i) == false) {
       cout << "x      ";
     } else {
@@ -44,7 +44,7 @@ void printWeeklySchedule() {
     }
   }
   cout << endl << model2 << "         ";
-  for (int i = 0; i != 7; i++) {
+  for (int i = 0; i <= 7; i++) {
     if (car2Availability.at(i) == false) {
       cout << "x      ";
     } else {
@@ -52,7 +52,7 @@ void printWeeklySchedule() {
     }
   }
   cout << endl << model3 << "          ";
-  for (int i = 0; i != 7; i++) {
+  for (int i = 0; i <= 7; i++) {
     if (car3Availability.at(i) == false) {
       cout << "x      ";
     } else {
@@ -60,7 +60,7 @@ void printWeeklySchedule() {
     }
   }
   cout << endl << model4 << "         ";
-  for (int i = 0; i != 7; i++) {
+  for (int i = 0; i <= 7; i++) {
     if (car4Availability.at(i) == false) {
       cout << "x      ";
     } else {
@@ -68,7 +68,7 @@ void printWeeklySchedule() {
     }
   }
   cout << endl << model5 << "   ";
-  for (int i = 0; i != 7; i++) {
+  for (int i = 0; i <= 7; i++) {
     if (car5Availability.at(i) == false) {
       cout << "x      ";
     } else {
