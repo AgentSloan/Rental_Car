@@ -13,7 +13,8 @@ using namespace std;
 void menu(vector<Car> ourCars) {
   char chose = '0';
   char confirm = 'n';
-  int test;
+  double test;
+  int day;
   string car = " ";
   cout << "=====Welcome to KArL & J Rental=====" << endl;
   do {
@@ -28,10 +29,13 @@ void menu(vector<Car> ourCars) {
     switch (chose) {
     case '1':
 
-      cout << "please pick from availible cars typing the car's name" << endl;
+      cout << "Please pick from availible cars typing the car's name" << endl;
       // calls the cars availible function
       cin >> car;
-      test = Rent(car, 1, ourCars);
+      cout << "Enter in Day of week Sun-saturday (1-7)" << endl;
+      cin >> day;
+
+      test = Rent(car, day, ourCars);
       cout << "Your axpoximate total is " << test << endl
            << "please confirm (y/n)" << endl;
       cin >> confirm;
