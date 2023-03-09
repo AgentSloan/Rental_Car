@@ -46,7 +46,7 @@ void menu(vector<Car> ourCars) {
       // the whole point is to rent a car if that is done then should it exit?
       break;
     case '2':
-      return_car(ourCars);
+      return_car(ourCars,day);
       re_loading();
       cout << "Thank You :) " << endl
            << "Your total is $<days_rented> * <price of car>" << endl;

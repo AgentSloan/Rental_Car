@@ -40,7 +40,7 @@ double Rent(string car, int day, vector<Car>& tempcar) {
   return -1;
 }
 // to return a car
-void return_car(vector<Car>& tempcar) {
+void return_car(vector<Car>& tempcar, int day) {
   string car;
   string responce;
   cout << "Please enter the model of your returned car" << std::endl;
@@ -55,7 +55,7 @@ void return_car(vector<Car>& tempcar) {
       cin >> responce;
       if (responce == "y") {
         for (int j = 0; j < tempcar[i].getDaysRented(); j++) {
-          tempcar[i].setAvailability(j, true);
+          tempcar[i].setAvailability((j+day), true);
         }
         tempcar[i].setDaysRented(0);
         cout << "Your rented car is returned" << std::endl;
