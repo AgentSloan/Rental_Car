@@ -50,7 +50,7 @@ void return_car(vector<Car> tempcar) {
       cout << "The car you are returning is " << tempcar[i].getMake() << " "
            << tempcar[i].getModel() << " which was rented for "
            << tempcar[i].getDaysRented() << " days" << endl;
-      cout << "Please confrim this is the correct car(y/n)";
+      cout << "Please confirm this is the correct car(y/n)";
       cin >> responce;
       if (responce == "y") {
         for (int j = 0; j < tempcar[i].getDaysRented(); j++) {
