@@ -5,7 +5,7 @@ using namespace std; // g++ main.cpp menu.cpp Rent_and_Return.cpp
                      // WeeklySchedule.cpp -o a.out to run code
 
 // Use to Rent a car till end of week
-double Rent(string car, int day, vector<Car> tempcar) {
+double Rent(string car, int day, vector<Car>& tempcar) {
   bool repeat = true;
   day = day - 1;
   while (repeat == true) {
@@ -40,7 +40,7 @@ double Rent(string car, int day, vector<Car> tempcar) {
   return -1;
 }
 // to return a car
-void return_car(vector<Car> tempcar) {
+void return_car(vector<Car>& tempcar) {
   string car;
   string responce;
   cout << "Please enter the model of your returned car" << std::endl;
