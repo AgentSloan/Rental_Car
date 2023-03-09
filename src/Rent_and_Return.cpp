@@ -16,7 +16,7 @@ double Rent(string car, int day, vector<Car>& tempcar) {
       if (car == tempcar[i].getModel()) {
         if ((DaysRented + day) >= 0 && (DaysRented + day) < 7) {
           if (tempcar[i].getAvailability(day) == true) {
-            for (int j = 1; j < DaysRented; j++) {
+            for (int j = 1; j <= DaysRented; j++) {
               tempcar[i].setAvailability((day+ j), false);
               tempcar[i].setDaysRented(DaysRented);
               //cout << tempcar[i].getModel() << " " << tempcar[i].getDaysRented()
