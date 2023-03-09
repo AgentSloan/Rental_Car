@@ -23,31 +23,31 @@ int main() {
   // Modify the Class Attributes
   chevyImpala.setMake("Chevy");
   chevyImpala.setModel("Impala");
-  chevyImpala.setPrice(150);
+  chevyImpala.setPrice(60);
   for (int i = 0; i != 7; i++) {
     chevyImpala.setAvailability(i, true);
   }
   fordTaurus.setMake("Ford");
   fordTaurus.setModel("Taurus");
-  fordTaurus.setPrice(100);
+  fordTaurus.setPrice(52);
   for (int i = 0; i != 7; i++) {
     fordTaurus.setAvailability(i, true);
   }
   volkswagenPassat.setMake("Volkswagen");
   volkswagenPassat.setModel("Passat");
-  volkswagenPassat.setPrice(50);
+  volkswagenPassat.setPrice(41);
   for (int i = 0; i != 7; i++) {
     volkswagenPassat.setAvailability(i, true);
   }
   toyotaCorolla.setMake("Toyota");
   toyotaCorolla.setModel("Corolla");
-  toyotaCorolla.setPrice(50);
+  toyotaCorolla.setPrice(29);
   for (int i = 0; i != 7; i++) {
     toyotaCorolla.setAvailability(i, true);
   }
   hondaPilot.setMake("Honda");
   hondaPilot.setModel("Pilot");
-  hondaPilot.setPrice(300);
+  hondaPilot.setPrice(60);
   for (int i = 0; i != 7; i++) {
     hondaPilot.setAvailability(i, true);
   }
