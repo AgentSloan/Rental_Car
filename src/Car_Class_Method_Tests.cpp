@@ -58,6 +58,14 @@ myFifthCar.setPrice(1000);
 std::cout << myFifthCar.getPrice() << std::endl;
 std::cout << "Price Testing Finished" << std::endl << std::endl;
 
+// Creates new instance of Car
+Car mySixthCar;
+// Tests First Day Rented Methods
+std::cout << "First Day Rented Testing Beginning" << std::endl;
+mySixthCar.setFirstDayRented(3);
+std::cout << mySixthCar.getFirstDayRented() << std::endl;
+std::cout << "First Day Rented Testing Finished" << std::endl << std::endl;
+
 std::cout << "All Testing Successfuly Completed!" << std::endl;
 
 return 0;
