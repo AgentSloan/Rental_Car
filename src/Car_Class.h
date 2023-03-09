@@ -17,6 +17,7 @@ private:
   std::string model;
   int daysRented = 0;
   double price;
+  int firstDayRented;
 
 public:
   // Constructors
@@ -48,4 +49,8 @@ public:
       this->price = price;
   }
   double getPrice(){ return this->price; }
+  void setFirstDayRented(int day){
+      this->firstDayRented = day;
+  }
+  int getFirstDayRented(){ return this-> firstDayRented; }
 };

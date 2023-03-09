@@ -34,7 +34,8 @@ void menu(vector<Car> ourCars) {
     //   if (printWeeklySchedule(ourCars) == -1) {
     //     cout << "Car not found" << endl;
     //   }
-      cout << "Enter in Day of week Sun-saturday (1-7)" << endl;
+      cin >> car;
+      cout << "Enter in Day of week Sun-Friday (1-6)" << endl;
       cin >> day;
 
       test = Rent(car, day, ourCars);
