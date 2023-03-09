@@ -30,11 +30,13 @@ void menu(vector<Car> ourCars) {
     case '1':
 
       cout << "Please pick from availible cars typing the car's name" << endl;
-      // calls the cars availible function
-      cin >> car;
+      printWeeklySchedule(ourCars);
+      if (printWeeklySchedule(ourCars) == -1){
+          cout << "Car not found" << endl;
+      }
       cout << "Enter in Day of week Sun-saturday (1-7)" << endl;
       cin >> day;
-
+    
       test = Rent(car, day, ourCars);
       cout << "Your axpoximate total is " << test << endl
            << "please confirm (y/n)" << endl;
