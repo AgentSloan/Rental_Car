@@ -10,7 +10,7 @@ double Rent(string car, int day, vector<Car> tempcar) {
   while (repeat == true) {
 
     int DaysRented;
-    cout << "How many days are your renting your car" << endl;
+    cout << "How many days are your renting your car?" << endl;
     cin >> DaysRented;
     for (int i = 0; i < tempcar.size(); i++) {
       if (car == tempcar[i].getModel()) {
@@ -28,7 +28,7 @@ double Rent(string car, int day, vector<Car> tempcar) {
             return -1; // Requested car is not avalable
           }
         } else {
-          cout << "Sorry you can only rent with in the current week" << endl;
+          cout << "Sorry you can only rent within the current week" << endl;
           return -1;
         }
       }
