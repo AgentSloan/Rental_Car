@@ -13,7 +13,7 @@ using namespace std;
 void menu(vector<Car> ourCars) {
   char chose = '0';
   char confirm = 'n';
-  double test;
+  double price;
   int day;
   string car = " ";
   cout << "=====Welcome to KArL & J Rental=====" << endl;
@@ -35,11 +35,11 @@ void menu(vector<Car> ourCars) {
     //     cout << "Car not found" << endl;
     //   }
       cin >> car;
-      cout << "Enter in Day of week Sun-Friday (1-6)" << endl;
+      cout << "Enter in Frist day of week you are renting. Sun-Friday (1-6)" << endl;
       cin >> day;
 
-      test = Rent(car, day, ourCars);
-      cout << "Your axpoximate total is " << test << endl
+      price = Rent(car, day, ourCars);
+      cout << "Your axpoximate total is " << price << endl
            << "please confirm (y/n)" << endl;
       cin >> confirm;
       if (confirm != 'y') {
@@ -49,10 +49,10 @@ void menu(vector<Car> ourCars) {
       // the whole point is to rent a car if that is done then should it exit?
       break;
     case '2':
-      return_car(ourCars, day);
+      return_car(ourCars);
       re_loading();
       cout << "Thank You :) " << endl
-           << "Your total is $<days_rented> * <price of car>" << endl;
+           << "Your total is $" << price << endl;
       break;
     case '3':
       printWeeklySchedule(ourCars);
