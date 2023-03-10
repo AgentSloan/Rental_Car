@@ -6,8 +6,8 @@
 #include <ostream>
 #include <vector>
 #include "menu.h"
-#include "Rent_and_Return.h"
-#include "WeeklySchedule.h"
+#include "rent_and_return.h"
+#include "weekly_schedule.h"
 using namespace std;
 
 // Create Rental car objects
