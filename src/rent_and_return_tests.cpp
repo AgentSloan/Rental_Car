@@ -1,3 +1,6 @@
+#include "car_class.h"
+#include "weekly_schedule.cpp"
+#include "weekly_schedule.h"
 #include <iomanip>
 #include <ios>
 #include <iostream>
@@ -6,103 +9,71 @@
 #include <vector>
 using namespace std;
 
-class Car {
-private:
-  // Private class attributes
-  std::vector<bool> availability;
-  std::string make;
-  std::string model;
-  int daysRented;
-  double price;
-
-public:
-  // Constructors
-  Car() {}
-  Car(int index, bool available) {
-    availability.resize(availability.size() + 1);
-    this->availability.at(index) = available;
-  }
-  // Methods to get and set availability
-  std::vector<bool> getAvailability() { return this->availability; }
-  void setAvailability(int index, bool available) {
-    availability.resize(availability.size() + 1);
-    this->availability.at(index) = available;
-  }
-  bool getAvailability(int index) { return this->availability.at(index); }
-  // Methods to get and set make
-  std::string getMake() { return this->make; }
-  void setMake(std::string make) { this->make = make; }
-  // Methods to get and set model
-  std::string getModel() { return this->model; }
-  void setModel(std::string model) { this->model = model; }
-  // methods to get and set daysRented
-  void setDaysRented(int days) { this->daysRented = days; }
-  int getDaysRented() { return this->daysRented; }
-  // methods to get and set price
-  void setPrice(double price) { this->price = price; }
-  double getPrice() { return this->price; }
-};
-
-double Rent(string car, int day, vector<Car> tempcar) {
+double Rent(string car, int day, vector<Car> &tempcar) {
   bool repeat = true;
+  int DaysRented;
   day = day - 1;
-  while (repeat == true) {
-
-    int DaysRented;
-    cout << "How many days are your renting your car" << endl;
-    cin >> DaysRented;
-    for (int i = 0; i < tempcar.size(); i++) {
-      if (car == tempcar[i].getModel()) {
-        if ((DaysRented + day) >= 0 && (DaysRented + day) < 7) {
-          if (tempcar[i].getAvailability(day) == true) {
-            for (int j = 1; j <= DaysRented; j++) {
-              tempcar[i].setAvailability(day, false);
-              tempcar[i].setDaysRented(DaysRented);
-              cout << tempcar[i].getModel() << " " << tempcar[i].getDaysRented()
-                   << endl;
-            }
-            return 100.00; // tempcar[i].getPrice();
-          } else {
-            cout << "Sorry this car is not avabile please try again" << endl;
-            return -1; // Requested car is not avalable
-          }
-        } else {
-          cout << "Sorry you can only rent with in the current week" << endl;
-          return -1;
-        }
-      }
-    }
-    cout << "Sorry that is not a car we have try again" << endl;
+  if (day > 6) {
+    cout << "Sorry we do not rent out Saturday as we are not open.";
+    return -1;
+  } else if (day < 0) {
+    cout << "Sorry pleace Enter a number (1-6)";
     return -1;
   }
-  return -1;
-}
 
-void return_car(vector<Car> tempcar) {
+  cout << "How many days are your renting your car?" << endl;
+  cin >> DaysRented;
+  for (int i = 0; i < tempcar.size(); i++) {
+    if (car == tempcar[i].getModel()) {
+      if ((DaysRented + day) >= 0 && (DaysRented + day) < 7) {
+        if (tempcar[i].getAvailability(day) == true) {
+          for (int j = 0; j < DaysRented; j++) {
+            tempcar[i].setFirstDayRented(day);
+            tempcar[i].setAvailability((day + j), false);
+            tempcar[i].setDaysRented(DaysRented);
+          }
+          return (tempcar[i].getPrice() * tempcar[i].getDaysRented());
+        } else {
+          cout << "Sorry this car is not avabile please try again" << endl;
+          return -1; // Requested car is not avalable
+        }
+      } else {
+        cout << "Sorry you can only rent within the current week" << endl;
+        return -1; // Error in user rent to far out
+      }
+    }
+  }
+  cout << "Sorry that is not a car we have. Please try again" << endl;
+  return -1; // Error if user enters in a missed spell and not a car we have
+}
+void return_car(vector<Car> &tempcar) {
   string car;
   string responce;
   cout << "Please enter the model of your returned car" << std::endl;
   cin >> car;
   int temp = 0;
   for (int i = 0; i < tempcar.size(); i++) {
-    if (tempcar[i].getModel() == car) {
+    if (tempcar[i].getModel() == car) { // Checks and comferming the right car
       cout << "The car you are returning is " << tempcar[i].getMake() << " "
            << tempcar[i].getModel() << " which was rented for "
            << tempcar[i].getDaysRented() << " days" << endl;
-      cout << "Please confrim this is the correct car(y/n)";
+      cout << "Please confirm this is the correct car(y/n)";
       cin >> responce;
-      if (responce == "y") {
-        for (int j = 0; j < tempcar[i].getDaysRented(); j++) {
-          tempcar[i].setAvailability(j, true);
+      if (responce == "y") { // code to reset need values
+        for (int j = -1; j <= tempcar[i].getDaysRented(); j++) {
+          tempcar[i].setAvailability((j + tempcar[i].getFirstDayRented()),
+                                     true);
         }
         tempcar[i].setDaysRented(0);
+        tempcar[i].setFirstDayRented(0);
         cout << "Your rented car is returned" << std::endl;
+        return; // no errors
       }
     }
-    cout << "Sorry that is not one of our cars." << endl;
-
   }
-  
+  cout << "Sorry that is not one of our cars."
+       << endl; // Error if they missed typed or not some thing we have
+  return;
 }
 
 Car chevyImpala;
@@ -152,13 +123,22 @@ int main() {
     cout << CarInstances[i].getModel() << " "
          << CarInstances[i].getAvailability(0) << endl;
   }
+
+  printWeeklySchedule(CarInstances);
+
   cout << "Enter Cars name " << endl;
   cin >> car;
+
   cout << "Enter in Day of week Sun-saturday (1-7)" << endl;
   cin >> day;
+    // gets need inoutes
   test = Rent(car, day, CarInstances);
-  cout << fixed;
-  cout << setprecision(2) << test << endl;
+  cout << "Price is: " << test << endl;
+    // outputs price
+  printWeeklySchedule(CarInstances); //print out the scheuile to see if rent work
+
   return_car(CarInstances);
+
+  printWeeklySchedule(CarInstances); //print out to see if return worked
   return 0;
 }
