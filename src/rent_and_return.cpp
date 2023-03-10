@@ -1,7 +1,7 @@
 #include "rent_and_return.h"
 #include <iostream>
 #include <vector>
-using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp weekly_schedule.cpp -o a.out to run
+using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp weekly_schedule.cpp -o a.out 
 
 // Funcaiton to Rent a car for starting data till friday
 double Rent(string car, int day, vector<Car> &tempcar) {
@@ -69,4 +69,5 @@ void return_car(vector<Car> &tempcar) {
   }
   cout << "Sorry that is not one of our cars."
        << endl; // Error if they missed typed or not some thing we have
+       return;
 }
