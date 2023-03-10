@@ -1,4 +1,4 @@
-#include "WeeklySchedule.h"
+#include "weekly_schedule.h"
 #include <iostream>
 #include <string>
 #include <vector>
