@@ -30,7 +30,10 @@ void menu(vector<Car> ourCars) {
     case '1':
 
       cout << "Please pick from availible cars typing the car's name" << endl;
-      // calls the cars availible function
+      printWeeklySchedule(ourCars);
+    //   if (printWeeklySchedule(ourCars) == -1) {
+    //     cout << "Car not found" << endl;
+    //   }
       cin >> car;
       cout << "Enter in Day of week Sun-Friday (1-6)" << endl;
       cin >> day;
@@ -46,7 +49,7 @@ void menu(vector<Car> ourCars) {
       // the whole point is to rent a car if that is done then should it exit?
       break;
     case '2':
-      return_car(ourCars,day);
+      return_car(ourCars, day);
       re_loading();
       cout << "Thank You :) " << endl
            << "Your total is $<days_rented> * <price of car>" << endl;
