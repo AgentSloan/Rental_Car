@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <iostream>
 #include <ostream>
+#include <stdexcept>
 #include <string>
 #include <thread>
 using namespace std;
@@ -31,13 +32,20 @@ void menu(vector<Car> ourCars) {
 
       cout << "Please pick from availible cars typing the car's name" << endl;
       printWeeklySchedule(ourCars);
-    //   if (printWeeklySchedule(ourCars) == -1) {
-    //     cout << "Car not found" << endl;
-    //   }
+      //   if (printWeeklySchedule(ourCars) == -1) {
+      //     cout << "Car not found" << endl;
+      //   }
       cin >> car;
-      cout << "Enter in Frist day of week you are renting. Sun-Friday (1-6)" << endl;
-      cin >> day;
-
+      try {
+        cout << "Enter in Frist day of week you are renting. Sun-Friday (1-6)"
+             << endl;
+        cin >> day;
+        if (day < 1 || day > 6) {
+          throw runtime_error("Please enter aviable day");
+        }
+      } catch (runtime_error &exeptObject) {
+        cerr << exeptObject.what() << endl;
+      }
       price = Rent(car, day, ourCars);
       cout << "Your axpoximate total is " << price << endl
            << "please confirm (y/n)" << endl;
@@ -51,8 +59,7 @@ void menu(vector<Car> ourCars) {
     case '2':
       return_car(ourCars);
       re_loading();
-      cout << "Thank You :) " << endl
-           << "Your total is $" << price << endl;
+      cout << "Thank You :) " << endl << "Your total is $" << price << endl;
       break;
     case '3':
       printWeeklySchedule(ourCars);
