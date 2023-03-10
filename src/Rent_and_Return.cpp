@@ -7,12 +7,16 @@ using namespace std; // g++ main.cpp menu.cpp Rent_and_Return.cpp
 // Use to Rent a car till end of week
 double Rent(string car, int day, vector<Car> &tempcar) {
   bool repeat = true;
+  int DaysRented;
   day = day - 1;
-  if (day == -1 || day > 6) {
+  if ( day > 6) {
     cout << "Sorry we do not rent out Saturday as we are not open.";
     return -1;
+  }else if (day < 0) {
+  cout << "Sorry pleace Enter a number (1-6)";
+  return -1;
   }
-  int DaysRented;
+  
   cout << "How many days are your renting your car?" << endl;
   cin >> DaysRented;
   for (int i = 0; i < tempcar.size(); i++) {
@@ -20,11 +24,9 @@ double Rent(string car, int day, vector<Car> &tempcar) {
       if ((DaysRented + day) >= 0 && (DaysRented + day) < 7) {
         if (tempcar[i].getAvailability(day) == true) {
           for (int j = 0; j < DaysRented; j++) {
+              //tempcar[i].set
             tempcar[i].setAvailability((day + j), false);
             tempcar[i].setDaysRented(DaysRented);
-            // cout << tempcar[i].getModel() << " " <<
-            // tempcar[i].getDaysRented()
-            //   << endl;
           }
           return (tempcar[i].getPrice() * tempcar[i].getDaysRented());
         } else {
