@@ -36,16 +36,7 @@ void menu(vector<Car> ourCars) {
       //     cout << "Car not found" << endl;
       //   }
       cin >> car;
-      try {
-        cout << "Enter in Frist day of week you are renting. Sun-Friday (1-6)"
-             << endl;
-        cin >> day;
-        if (day < 1 || day > 6) {
-          throw runtime_error("Please enter aviable day");
-        }
-      } catch (runtime_error &exeptObject) {
-        cerr << exeptObject.what() << endl;
-      }
+      chooseDay();
       price = Rent(car, day, ourCars);
       cout << "Your axpoximate total is " << price << endl
            << "please confirm (y/n)" << endl;
@@ -72,6 +63,22 @@ void menu(vector<Car> ourCars) {
     }
 
   } while (chose != '0');
+}
+
+int chooseDay() {
+  int day;
+  try {
+    cout << "Enter in Frist day of week you are renting. Sun-Friday (1-6)"
+         << endl;
+    cin >> day;
+    if (day < 1 || day > 6) {
+      throw runtime_error("Please enter aviable day");
+    }
+  } catch (runtime_error &exeptObject) {
+    cerr << exeptObject.what() << endl;
+    chooseDay();
+  }
+  return day;
 }
 
 void loading() {

@@ -10,3 +10,4 @@
 void menu(vector<Car> ourCars);
 void loading();
 void re_loading();
+int chooseDay();
