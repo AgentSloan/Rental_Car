@@ -8,7 +8,7 @@ double Rent(string car, int day, vector<Car> &tempcar) {
   bool repeat = true;
   int DaysRented;
   day = day - 1;
-  if (day > 6) {
+  if (day < 6) {
     cout << "Sorry we do not rent out Saturday as we are not open.";
     return -1;
   } else if (day < 0) {
