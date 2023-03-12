@@ -53,7 +53,7 @@ void menu(vector<Car> ourCars) {
     case '2':
       return_car(ourCars);
       re_loading();
-      cout << "Thank You :) " << endl << "Your total is $" << price << endl;
+      
       break;
     case '3':
       printWeeklySchedule(ourCars);
