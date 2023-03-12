@@ -36,7 +36,7 @@ void menu(vector<Car> ourCars) {
       //     cout << "Car not found" << endl;
       //   }
       cin >> car;
-      chooseDay();
+      day = chooseDay();
       price = Rent(car, day, ourCars);
       cout << "Your axpoximate total is " << price << endl
            << "please confirm (y/n)" << endl;

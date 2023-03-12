@@ -15,7 +15,7 @@ double Rent(string car, int day, vector<Car> &tempcar) {
     cout << "Sorry pleace Enter a number (1-6)";
     return -1;
   }
-
+    
   cout << "How many days are your renting your car?" << endl;
   cin >> DaysRented;
   for (int i = 0; i < tempcar.size(); i++) {
