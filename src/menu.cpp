@@ -38,6 +38,9 @@ void menu(vector<Car> ourCars) {
       cin >> car;
       day = chooseDay();
       price = Rent(car, day, ourCars);
+      if (price < 1) {
+          break;
+      }
       cout << "Your axpoximate total is " << price << endl
            << "please confirm (y/n)" << endl;
       cin >> confirm;
