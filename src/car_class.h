@@ -45,6 +45,7 @@ public:
   // methods to get and set price
   void setPrice(double price) { this->price = price; }
   double getPrice() { return this->price; }
+  // methods to get and set first day rented
   void setFirstDayRented(int day) { this->firstDayRented = day; }
   int getFirstDayRented() { return this->firstDayRented; }
 };
