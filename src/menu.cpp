@@ -68,11 +68,11 @@ void menu(vector<Car> ourCars) {
 int chooseDay() {
   int day;
   try {
-    cout << "Enter in Frist day of week you are renting. Sun-Friday (1-6)"
+    cout << "Enter in First day of week you are renting. Sun-Friday (1-6)"
          << endl;
     cin >> day;
     if (day < 1 || day > 6) {
-      throw runtime_error("Please enter aviable day");
+      throw runtime_error("Please enter available day");
     }
   } catch (runtime_error &exeptObject) {
     cerr << exeptObject.what() << endl;
