@@ -3,15 +3,6 @@
 #include <string>
 #include <vector>
 using namespace std;
-// THIS IS FOR THE FINAL CODE <D
-
-// Create dummy variables
-// Define Availiabilty vecot
-// vector<bool> car1Availability{true, true, false, true, true, true, true};
-// vector<bool> car2Availability{true, true, false, false, false, false, true};
-// vector<bool> car3Availability{true, false, false, false, false, false, true};
-// vector<bool> car4Availability{true, false, false, false, false, false, true};
-// vector<bool> car5Availability{true, true, true, true, true, true, false};
 
 // Create Variables to print the car names in the schedule
 string model1 = "Impala";
