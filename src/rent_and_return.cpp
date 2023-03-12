@@ -77,7 +77,7 @@ void return_car(vector<Car> &tempcar) {
         return; // no errors
       }
     }
-    cout << "Sorry this car id not rented";
+    cout << "Sorry this car is not rented";
     return;
   }
   cout << "Sorry that is not one of our cars."
