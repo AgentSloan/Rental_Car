@@ -35,7 +35,7 @@ double Rent(string car, int day, vector<Car> &tempcar) {
       if ((DaysRented + day) >= 0 && (DaysRented + day) < 7) {
         if (tempcar[i].getAvailability(day) == true) {
           for (int j = 0; j < DaysRented; j++) {
-            tempcar[i].setFirstDayRented(day+1);
+            tempcar[i].setFirstDayRented(day + 1);
             tempcar[i].setAvailability((day + j), false);
             tempcar[i].setDaysRented(DaysRented);
           }
@@ -67,9 +67,9 @@ void return_car(vector<Car> &tempcar) {
       cout << "Please confirm this is the correct car(y/n)";
       cin >> responce;
       if (responce == "y") { // code to reset need values
-      if(tempcar[i].getDaysRented() == 0){
+        if (tempcar[i].getDaysRented() == 0) {
           return;
-      }
+        }
         for (int j = -1; j <= tempcar[i].getDaysRented(); j++) {
           tempcar[i].setAvailability((j + tempcar[i].getFirstDayRented()),
                                      true);
