@@ -18,6 +18,8 @@ void menu(vector<Car> ourCars) {
   int day;
   string car = " ";
   cout << "=====Welcome to KArL & J Rental=====" << endl;
+
+  // menu do-while loop
   do {
     car = " ";
     chose = '0';
@@ -28,18 +30,16 @@ void menu(vector<Car> ourCars) {
          << " 3) See reservation schedule" << endl;
     cin >> chose;
     switch (chose) {
-    case '1':
 
+    // Rent a car case
+    case '1':
       cout << "Please pick from available cars typing the car's name" << endl;
       printWeeklySchedule(ourCars);
-      //   if (printWeeklySchedule(ourCars) == -1) {
-      //     cout << "Car not found" << endl;
-      //   }
       cin >> car;
       day = chooseDay();
       price = Rent(car, day, ourCars);
       if (price < 1) {
-          break;
+        break;
       }
       cout << "Your approximate total is $" << price << endl
            << "please confirm (y/n) " << endl;
@@ -48,13 +48,15 @@ void menu(vector<Car> ourCars) {
         break;
       }
       loading();
-      // the whole point is to rent a car if that is done then should it exit?
       break;
+
+    // return a car case
     case '2':
       return_car(ourCars);
       re_loading();
-      
       break;
+
+    // if you only want to see schedule
     case '3':
       printWeeklySchedule(ourCars);
       break;
@@ -68,8 +70,11 @@ void menu(vector<Car> ourCars) {
   } while (chose != '0');
 }
 
+// which day to start rent
 int chooseDay() {
   int day;
+
+  // try-catch-throw stretch
   try {
     cout << "Enter in first day of week you are renting. Sunday-Friday (1-6)"
          << endl;
@@ -84,6 +89,7 @@ int chooseDay() {
   return day;
 }
 
+// loading animation
 void loading() {
   char a = ' ';
   for (int i = 115, j = 0; i >= 15; i--) {
@@ -100,6 +106,8 @@ void loading() {
   cout << endl;
   cout << "Your car is ready for pick up" << endl;
 }
+
+// return animation
 void re_loading() {
   for (int i = 15, j = 0; i <= 115; i++) {
     cout << endl << endl << endl << endl << endl << endl;
@@ -115,12 +123,3 @@ void re_loading() {
   cout << endl;
   cout << "Your car is successfully returned" << endl;
 }
-
-// test call, can be deleted when implemented to main
-// int main() {
-// //   // re_loading();
-//   menu();
-//   return 0;
-// }
-// hi
-// this is the 100th line of code :)
