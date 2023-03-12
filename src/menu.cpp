@@ -30,7 +30,7 @@ void menu(vector<Car> ourCars) {
     switch (chose) {
     case '1':
 
-      cout << "Please pick from availible cars typing the car's name" << endl;
+      cout << "Please pick from available cars typing the car's name" << endl;
       printWeeklySchedule(ourCars);
       //   if (printWeeklySchedule(ourCars) == -1) {
       //     cout << "Car not found" << endl;
@@ -41,7 +41,7 @@ void menu(vector<Car> ourCars) {
       if (price < 1) {
           break;
       }
-      cout << "Your axpoximate total is " << price << endl
+      cout << "Your approximate total is " << price << endl
            << "please confirm (y/n)" << endl;
       cin >> confirm;
       if (confirm != 'y') {
@@ -62,7 +62,7 @@ void menu(vector<Car> ourCars) {
       cout << "Goodbye :)" << endl;
       exit(0);
     default:
-      cout << "please enter a valid option" << endl;
+      cout << "Please enter a valid option" << endl;
     }
 
   } while (chose != '0');
