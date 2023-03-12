@@ -19,8 +19,8 @@
    - Rent 
    - Return functions
 
-![UML Diagram](Screenshot2023-03-12at2.47.16PM.png)
-![Flow Diagram](Screenshot2023-03-12at2.47.23PM.png)
+![UML Diagram](UML_Diagram.png)
+![Flow Diagram](Flow_Diagrams.png)
 
 # Timeline
    - 2/22 Organization of tasks
