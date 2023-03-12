@@ -5,8 +5,8 @@
 */
 
 #pragma once
-#include <string>
 #include <iostream>
+#include <string>
 #include <vector>
 using namespace std;
 class Car {
@@ -40,17 +40,11 @@ public:
   std::string getModel() { return this->model; }
   void setModel(std::string model) { this->model = model; }
   // methods to get and set daysRented
-  void setDaysRented(int days){
-      this->daysRented = days;
-  }
-  int getDaysRented(){ return this->daysRented; }
+  void setDaysRented(int days) { this->daysRented = days; }
+  int getDaysRented() { return this->daysRented; }
   // methods to get and set price
-  void setPrice(double price){
-      this->price = price;
-  }
-  double getPrice(){ return this->price; }
-  void setFirstDayRented(int day){
-      this->firstDayRented = day;
-  }
-  int getFirstDayRented(){ return this-> firstDayRented; }
+  void setPrice(double price) { this->price = price; }
+  double getPrice() { return this->price; }
+  void setFirstDayRented(int day) { this->firstDayRented = day; }
+  int getFirstDayRented() { return this->firstDayRented; }
 };

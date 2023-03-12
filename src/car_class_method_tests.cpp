@@ -5,68 +5,68 @@
 */
 
 #include "car_class.h"
-#include <iostream>
-#include <string> 
 #include <assert.h>
+#include <iostream>
+#include <string>
 
 // Not Complete
-int main(){
-// Creates instance of Car
-Car myCar(0, true);
-std::cout << "Availability Testing Beginning" << std::endl;
-// Tests availability methods
-assert(myCar.getAvailability().at(0) == true);
-// Changes availability
-myCar.setAvailability(0, false);
-// Tests availability again
-assert(myCar.getAvailability().at(0) == false);
-// Change availability at index 1
-myCar.setAvailability(1, true);
-// Tests availability at index 1
-assert(myCar.getAvailability().at(1) == true);
-std::cout << "Availability Testing Finished" << std::endl << std::endl;
+int main() {
+  // Creates instance of Car
+  Car myCar(0, true);
+  std::cout << "Availability Testing Beginning" << std::endl;
+  // Tests availability methods
+  assert(myCar.getAvailability().at(0) == true);
+  // Changes availability
+  myCar.setAvailability(0, false);
+  // Tests availability again
+  assert(myCar.getAvailability().at(0) == false);
+  // Change availability at index 1
+  myCar.setAvailability(1, true);
+  // Tests availability at index 1
+  assert(myCar.getAvailability().at(1) == true);
+  std::cout << "Availability Testing Finished" << std::endl << std::endl;
 
-// Creates new instance of Car
-Car mySecondCar;
-// Tests make methods
-std::cout << "Make Testing Beginning" << std::endl;
-mySecondCar.setMake("Honda");
-std::cout << mySecondCar.getMake() << std::endl;
-std::cout << "Make Testing Finished" << std::endl << std::endl;
+  // Creates new instance of Car
+  Car mySecondCar;
+  // Tests make methods
+  std::cout << "Make Testing Beginning" << std::endl;
+  mySecondCar.setMake("Honda");
+  std::cout << mySecondCar.getMake() << std::endl;
+  std::cout << "Make Testing Finished" << std::endl << std::endl;
 
-// Creates new instance of Car
-Car myThirdCar;
-// Tests model methods
-std::cout << "Model Testing Beginning" << std::endl;
-myThirdCar.setModel("Pilot");
-std::cout << myThirdCar.getModel() << std::endl;
-std::cout << "Model Testing Finished" << std::endl << std::endl;
+  // Creates new instance of Car
+  Car myThirdCar;
+  // Tests model methods
+  std::cout << "Model Testing Beginning" << std::endl;
+  myThirdCar.setModel("Pilot");
+  std::cout << myThirdCar.getModel() << std::endl;
+  std::cout << "Model Testing Finished" << std::endl << std::endl;
 
-// Creates new instance of Car
-Car myFourthCar;
-// Tests days rented methods
-std::cout << "Days Rented Testing Beginning" << std::endl;
-myFourthCar.setDaysRented(3);
-std::cout << myFourthCar.getDaysRented() << std::endl;
-std::cout << "Days Rented Testing Finished" << std::endl << std::endl;
+  // Creates new instance of Car
+  Car myFourthCar;
+  // Tests days rented methods
+  std::cout << "Days Rented Testing Beginning" << std::endl;
+  myFourthCar.setDaysRented(3);
+  std::cout << myFourthCar.getDaysRented() << std::endl;
+  std::cout << "Days Rented Testing Finished" << std::endl << std::endl;
 
-// Creates new instance of Car
-Car myFifthCar;
-// Tests price methods
-std::cout << "Price Testing Beginning" << std::endl;
-myFifthCar.setPrice(1000);
-std::cout << myFifthCar.getPrice() << std::endl;
-std::cout << "Price Testing Finished" << std::endl << std::endl;
+  // Creates new instance of Car
+  Car myFifthCar;
+  // Tests price methods
+  std::cout << "Price Testing Beginning" << std::endl;
+  myFifthCar.setPrice(1000);
+  std::cout << myFifthCar.getPrice() << std::endl;
+  std::cout << "Price Testing Finished" << std::endl << std::endl;
 
-// Creates new instance of Car
-Car mySixthCar;
-// Tests First Day Rented Methods
-std::cout << "First Day Rented Testing Beginning" << std::endl;
-mySixthCar.setFirstDayRented(3);
-std::cout << mySixthCar.getFirstDayRented() << std::endl;
-std::cout << "First Day Rented Testing Finished" << std::endl << std::endl;
+  // Creates new instance of Car
+  Car mySixthCar;
+  // Tests First Day Rented Methods
+  std::cout << "First Day Rented Testing Beginning" << std::endl;
+  mySixthCar.setFirstDayRented(3);
+  std::cout << mySixthCar.getFirstDayRented() << std::endl;
+  std::cout << "First Day Rented Testing Finished" << std::endl << std::endl;
 
-std::cout << "All Testing Successfuly Completed!" << std::endl;
+  std::cout << "All Testing Successfuly Completed!" << std::endl;
 
-return 0;
+  return 0;
 }
