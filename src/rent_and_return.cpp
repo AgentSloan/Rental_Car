@@ -9,9 +9,8 @@ using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp
 double Rent(string car, int day, vector<Car> &tempcar) {
   bool repeat = true;
   int DaysRented;
-  // cout << day;
   day = day - 1;
-  if (day > 6) {
+  if (day > 6) { // Checks to see if days are correct
     cout << "Sorry we do not rent out Saturday as we are not open." << endl;
     return -1;
   } else if (day < 0) {
@@ -20,7 +19,7 @@ double Rent(string car, int day, vector<Car> &tempcar) {
   }
   for (int i = 0; i < tempcar.size(); i++) {
     if (car == tempcar[i].getModel()) {
-      if (tempcar[i].getDaysRented() > 0) {
+      if (tempcar[i].getDaysRented() > 0) { // Makes sure car is avaibale
         cout
             << "Sorry this Car is already rented this week and is not returned."
             << endl;
@@ -33,13 +32,13 @@ double Rent(string car, int day, vector<Car> &tempcar) {
   for (int i = 0; i < tempcar.size(); i++) {
     if (car == tempcar[i].getModel()) {
       if ((DaysRented + day) >= 0 && (DaysRented + day) < 7) {
-        if (tempcar[i].getAvailability(day) == true) {
+        if (tempcar[i].getAvailability(day) == true) { // many checks to make sure car can be rented in days
           for (int j = 0; j < DaysRented; j++) {
-            tempcar[i].setFirstDayRented(day + 1);
+            tempcar[i].setFirstDayRented(day + 1); // changes to car so they are rented
             tempcar[i].setAvailability((day + j), false);
             tempcar[i].setDaysRented(DaysRented);
           }
-          return (tempcar[i].getPrice() * tempcar[i].getDaysRented());
+          return (tempcar[i].getPrice() * tempcar[i].getDaysRented()); // return price
         } else {
           cout << "Sorry this car is not avabile please try again" << endl;
           return -1; // Requested car is not avalable
@@ -70,7 +69,7 @@ void return_car(vector<Car> &tempcar) {
         if (tempcar[i].getDaysRented() == 0) {
           return;
         }
-        for (int j = -1; j <= tempcar[i].getDaysRented(); j++) {
+        for (int j = -1; j <= tempcar[i].getDaysRented(); j++) { // resets values
           tempcar[i].setAvailability((j + tempcar[i].getFirstDayRented()),
                                      true);
         }
