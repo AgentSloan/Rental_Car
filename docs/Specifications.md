@@ -19,8 +19,11 @@
    - Rent 
    - Return functions
 
+![UML Diagram](Screenshot2023-03-12at2.47.16PM.png)
+![Flow Diagram](Screenshot2023-03-12at2.47.23PM.png)
+
 # Timeline
-   - 2/22 Orangtivatin of tasks
+   - 2/22 Organization of tasks
    - 2/26 Proto code should be pushed
-   - 3/5  Megering code together and debug
+   - 3/5  Merging code together and debugging
    - 3/12 Final debug and talking about presentation
