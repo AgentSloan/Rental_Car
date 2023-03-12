@@ -71,7 +71,7 @@ void menu(vector<Car> ourCars) {
 int chooseDay() {
   int day;
   try {
-    cout << "Enter in first day of week you are renting. Sun-Friday (1-6)"
+    cout << "Enter in first day of week you are renting. Sunday-Friday (1-6)"
          << endl;
     cin >> day;
     if (day < 1 || day > 6) {
