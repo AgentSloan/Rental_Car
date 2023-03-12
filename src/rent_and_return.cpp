@@ -76,7 +76,7 @@ void return_car(vector<Car> &tempcar) {
         }
         tempcar[i].setDaysRented(0);
         tempcar[i].setFirstDayRented(0);
-        cout << "Your rented car is returned" << std::endl;
+        cout << " Thank you :). Your rented car is returned" << std::endl;
         return; // no errors
       }
     }

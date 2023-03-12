@@ -1,5 +1,14 @@
 # Group members and tasks
-## Andrew: User Interface and Menu 
-## Luke : Schedule and class objects
-## Josh: Car class AKA code breaker
-## Kolby: Rent and Return functions
+## Andrew: 
+   - User Interface 
+   - Menu 
+## Luke : 
+   - Schedule
+   - class objects
+## Josh: 
+   - Car class 
+   - code breaker
+## Kolby: 
+   - Rent 
+   - Return functions
+
