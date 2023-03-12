@@ -5,7 +5,7 @@
 using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp
                      // weekly_schedule.cpp -o a.out
 
-// Funcaiton to Rent a car for starting data till friday
+// Function to Rent a car for starting data till friday
 double Rent(string car, int day, vector<Car> &tempcar) {
   bool repeat = true;
   int DaysRented;
@@ -53,7 +53,7 @@ double Rent(string car, int day, vector<Car> &tempcar) {
   cout << "Sorry that is not a car we have. Please try again" << endl;
   return -1; // Error if user enters in a missed spell and not a car we have
 }
-// Funcaiton to return a car
+// Function to return a car
 void return_car(vector<Car> &tempcar) {
   string car;
   string responce;
