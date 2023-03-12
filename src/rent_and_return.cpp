@@ -2,22 +2,32 @@
 #include <iostream>
 #include <ostream>
 #include <vector>
-using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp weekly_schedule.cpp -o a.out 
+using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp
+                     // weekly_schedule.cpp -o a.out
 
 // Funcaiton to Rent a car for starting data till friday
 double Rent(string car, int day, vector<Car> &tempcar) {
   bool repeat = true;
   int DaysRented;
-  //cout << day;
+  // cout << day;
   day = day - 1;
   if (day > 6) {
-    cout << "Sorry we do not rent out Saturday as we are not open."<< endl;
+    cout << "Sorry we do not rent out Saturday as we are not open." << endl;
     return -1;
   } else if (day < 0) {
     cout << "Sorry pleace Enter a number (1-6)";
     return -1;
   }
-    
+  for (int i = 0; i < tempcar.size(); i++) {
+    if (car == tempcar[i].getModel()) {
+      if (tempcar[i].getDaysRented() > 0) {
+        cout
+            << "Sorry this Car is already rented this week and is not returned."
+            << endl;
+        return -1;
+      }
+    }
+  }
   cout << "How many days are your renting your car?" << endl;
   cin >> DaysRented;
   for (int i = 0; i < tempcar.size(); i++) {
@@ -71,5 +81,5 @@ void return_car(vector<Car> &tempcar) {
   }
   cout << "Sorry that is not one of our cars."
        << endl; // Error if they missed typed or not some thing we have
-       return;
+  return;
 }
