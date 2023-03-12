@@ -42,7 +42,7 @@ void menu(vector<Car> ourCars) {
           break;
       }
       cout << "Your approximate total is $" << price << endl
-           << "please confirm (y/n)" << endl;
+           << "please confirm (y/n) " << endl;
       cin >> confirm;
       if (confirm != 'y') {
         break;
