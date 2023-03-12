@@ -1,5 +1,6 @@
 #include "rent_and_return.h"
 #include <iostream>
+#include <ostream>
 #include <vector>
 using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp weekly_schedule.cpp -o a.out 
 
@@ -7,9 +8,10 @@ using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp weekly_schedul
 double Rent(string car, int day, vector<Car> &tempcar) {
   bool repeat = true;
   int DaysRented;
+  //cout << day;
   day = day - 1;
-  if (day < 6) {
-    cout << "Sorry we do not rent out Saturday as we are not open.";
+  if (day > 6) {
+    cout << "Sorry we do not rent out Saturday as we are not open."<< endl;
     return -1;
   } else if (day < 0) {
     cout << "Sorry pleace Enter a number (1-6)";
