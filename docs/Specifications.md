@@ -1,5 +1,3 @@
-
-
 # Antiticipated Challenges
    - Megering code
    - Git
