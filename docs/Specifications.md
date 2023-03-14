@@ -22,6 +22,9 @@
 ![UML Diagram](UML_Diagram.png)
 ![Flow Diagram](Flow_Diagrams.png)
 
+# Slide Presentation
+(Slides presentation)[https://docs.google.com/presentation/d/1I_sYdgSXUiIVj5skKLy5P8pCnnFjLZQfcXQVbZ0r9cI/edit?usp=sharing]
+
 # Timeline
    - 2/22 Organization of tasks
    - 2/26 Proto code should be pushed
