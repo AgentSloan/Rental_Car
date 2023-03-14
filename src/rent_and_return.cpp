@@ -2,8 +2,7 @@
 #include <iostream>
 #include <ostream>
 #include <vector>
-using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp
-                     // weekly_schedule.cpp -o a.out
+using namespace std; // g++ main.cpp menu.cpp rent_and_return.cpp weekly_schedule.cpp -o a.out
 
 // Function to Rent a car for starting data till friday
 double Rent(string car, int day, vector<Car> &tempcar) {
@@ -57,13 +56,14 @@ void return_car(vector<Car> &tempcar) {
   string car;
   string responce;
   cout << "Please enter the model of your returned car" << std::endl;
+  cout << "Impala, Taurus, Passat, Corolla, or Pilot: "; 
   cin >> car;
   for (int i = 0; i < tempcar.size(); i++) {
     if (tempcar[i].getModel() == car) { // Checks and comferming the right car
       cout << "The car you are returning is " << tempcar[i].getMake() << " "
            << tempcar[i].getModel() << " which was rented for "
            << tempcar[i].getDaysRented() << " days" << endl;
-      cout << "Please confirm this is the correct car(y/n)";
+      cout << "Please confirm this is the correct car (y/n): ";
       cin >> responce;
       if (responce == "y") { // code to reset need values
         if (tempcar[i].getDaysRented() == 0) {
